@@ -1,7 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather|Poppins");
+body, * {
+  margin: 0; }
+
+* {
+  box-sizing: border-box; }
+
 h1,
 h2,
 h3 {
-  font-family: "Merriweather"; }
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  text-align: center; }
+
+h1::after {
+  content: " ";
+  display: block;
+  border: solid 2px black;
+  width: 200px; }
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; }
+
+.main-header {
+  background-color: yellow; }
+
+.navbar {
+  position: fixed, sticky;
+  background-color: aqua; }
+
+.primary-content {
+  background-color: blueviolet; }
+
+.secondary-content {
+  background-color: teal; }
+
+.grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100vh 20vh 50vh 50vh 30vh;
+  grid-template-areas: "header header header" "nav nav nav" "primary primary primary" "secondary secondary secondary" "footer footer footer"; }
+
+.main-header {
+  grid-area: header; }
+
+.navbar {
+  grid-area: nav; }
 
 /*# sourceMappingURL=main.css.map */

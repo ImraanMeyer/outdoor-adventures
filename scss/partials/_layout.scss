@@ -1,0 +1,18 @@
+.grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100vh 20vh 50vh 50vh 30vh;
+    grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "primary primary primary"
+        "secondary secondary secondary"
+        "footer footer footer";
+}
+
+.main-header {
+    grid-area: header;
+}
+
+.navbar {
+    grid-area: nav;
+}
