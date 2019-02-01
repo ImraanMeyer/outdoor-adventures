@@ -22,55 +22,60 @@ p, a {
     color: $second-col;
 }
 
-.main-header {
-
-    .sub {
-        font-size: 2vw;
-        padding: 18vh 0 0 0;
-        align-items: center;
-        color: $bone;
-        margin: 0 300px 0 300px;
-        line-height: 3.4em;
-    }
-    .sub::after {
-        content: "";
-        display: block;
-        border-bottom: solid $bone 2.8px;
-    }
-    
-    .title {
-        font-size: 6vw;
-        margin: 0 100px 0 100px; 
-    }
-}
-
 .grid {
     .main {
         &-header {
             height: 100vh;
             @include background;
             text-align: center;
+            .sub {
+                font-size: 2vw;
+                padding: 18vh 0 0 0;
+                align-items: center;
+                color: $bone;
+                margin: 0 300px 0 300px;
+                line-height: 3.4em;
+            }
+            .sub::after {
+                content: "";
+                display: block;
+                border-bottom: solid $bone 2.8px;
+            }
+            .title {
+                font-size: 6vw;
+                margin: 0 100px 0 100px; 
+            }
         }
+
         &-nav {
             background-color: $bgnav-1;
             position: sticky;
             padding-top: 6vh;
             padding-bottom: 6vh; 
             text-align: center;
-            opacity: 0.4;
-
-            ul li{
+                ul li{
                 display: inline;
-            }
+                .nav-links  {
+                    margin-right: 4.2vw;
+                    margin-left: 4.2vw;
+                    // choose different allernate color out-standing? 
+                    background-color: $brown;
+                    border-radius: 2vh;
+                    padding: 0.6em;
+                    width: 0.2em;
+                    text-decoration: none;
         }
 
     }
+        }
         
 
         
 
     .primary-content {
         background-color: blueviolet;
+        height: 80vh;
+        padding: 2em;
     }
 
     .secondary-content {

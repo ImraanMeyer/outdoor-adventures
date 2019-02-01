@@ -1,6 +1,6 @@
 .grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100vh auto 50vh 50vh 30vh;
+    grid-template-rows: 100vh auto 100vh 50vh 30vh;
     grid-template-areas: 
         "header header header"
         "nav nav nav"
@@ -15,4 +15,16 @@
 
 .main-nav {
     grid-area: nav;
+}
+
+.primary-content {
+    grid-area: primary;
+}
+
+.secondary-content {
+    grid-area: secondary;
+}
+
+.main-footer {
+    grid-area: footer;
 }

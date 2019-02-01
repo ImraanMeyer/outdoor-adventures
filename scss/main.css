@@ -21,28 +21,6 @@ p, a {
   color: #909190;
 }
 
-.main-header .sub {
-  font-size: 2vw;
-  padding: 18vh 0 0 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #d4dfc7;
-  margin: 0 300px 0 300px;
-  line-height: 3.4em;
-}
-
-.main-header .sub::after {
-  content: "";
-  display: block;
-  border-bottom: solid #d4dfc7 2.8px;
-}
-
-.main-header .title {
-  font-size: 6vw;
-  margin: 0 100px 0 100px;
-}
-
 .grid .main-header {
   height: 100vh;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#878e88b4), to(#f5c1b8d8)), url(../images/cliff1.jpg);
@@ -53,22 +31,55 @@ p, a {
   text-align: center;
 }
 
+.grid .main-header .sub {
+  font-size: 2vw;
+  padding: 18vh 0 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #d4dfc7;
+  margin: 0 300px 0 300px;
+  line-height: 3.4em;
+}
+
+.grid .main-header .sub::after {
+  content: "";
+  display: block;
+  border-bottom: solid #d4dfc7 2.8px;
+}
+
+.grid .main-header .title {
+  font-size: 6vw;
+  margin: 0 100px 0 100px;
+}
+
 .grid .main-nav {
-  background-color: #ffffff2d;
+  background-color: #ffffff09;
   position: -webkit-sticky;
   position: sticky;
   padding-top: 6vh;
   padding-bottom: 6vh;
   text-align: center;
-  opacity: 0.4;
 }
 
 .grid .main-nav ul li {
   display: inline;
 }
 
+.grid .main-nav ul li .nav-links {
+  margin-right: 4.2vw;
+  margin-left: 4.2vw;
+  background-color: #725752;
+  border-radius: 2vh;
+  padding: 0.6em;
+  width: 0.2em;
+  text-decoration: none;
+}
+
 .grid .primary-content {
   background-color: blueviolet;
+  height: 80vh;
+  padding: 2em;
 }
 
 .grid .secondary-content {
@@ -82,8 +93,8 @@ p, a {
 .grid {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 100vh auto 50vh 50vh 30vh;
-      grid-template-rows: 100vh auto 50vh 50vh 30vh;
+  -ms-grid-rows: 100vh auto 100vh 50vh 30vh;
+      grid-template-rows: 100vh auto 100vh 50vh 30vh;
       grid-template-areas: "header header header" "nav nav nav" "primary primary primary" "secondary secondary secondary" "footer footer footer";
 }
 
@@ -101,44 +112,52 @@ p, a {
   grid-area: nav;
 }
 
+.primary-content {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: primary;
+}
+
+.secondary-content {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: secondary;
+}
+
+.main-footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+}
+
 .main-nav:hover {
-  opacity: 0.6;
   background-color: #eef0f29c;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
 
-.nav-links {
-  margin-right: 4.2vw;
-  margin-left: 4.2vw;
-  background-color: #725752;
-  border-radius: 2vh;
-  padding: 0.6em;
-  width: 0.2em;
-  opacity: 0.4;
-  text-decoration: none;
-}
-
-.nav-links.nav-links:hover {
+.main-nav:hover.nav-links:hover {
   background: #d4dfc7;
   -webkit-transition: 0.8s;
   transition: 0.8s;
-  opacity: 1;
 }
 
-.nav-links.nav-links:active {
+.main-nav:hover.nav-links:active {
   background: #96c094;
 }
 
-.nav-links a {
+.main-nav:hover-a {
   text-decoration: none;
 }
 
-.nav-links a:hover {
+.main-nav:hover-a:hover {
   color: #725752;
 }
 
-.nav-links a:active {
+.main-nav:hovera-:active {
   color: #eef0f2;
 }
 /*# sourceMappingURL=main.css.map */

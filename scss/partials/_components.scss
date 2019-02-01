@@ -1,35 +1,24 @@
 .main-nav:hover {
-    opacity: 0.6;
     background-color: $bgnav-2;
     transition: 0.4s ease;
-
-}
-
-.nav-links  {
-    margin-right: 4.2vw;
-    margin-left: 4.2vw;
-    // choose different allernate color out-standing? 
-    background-color: $brown;
-    border-radius: 2vh;
-    padding: 0.6em;
-    width: 0.2em;
-    opacity: 0.4;
-    text-decoration: none;
 
     &.nav-links:hover {
         // ===
         background: $bone;
         // 
         transition: 0.8s;
-        opacity: 1;
+        // opacity: 1;
     }
     &.nav-links:active {
         background: $green;
     }
-        a {
+        &-a {
             text-decoration: none;}
-        a:hover {
+        &-a:hover {
             color: $brown;}
-        a:active {
+        &a-:active {
             color: $white;}
-}   
+        } 
+
+
+        
