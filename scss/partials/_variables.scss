@@ -1,16 +1,30 @@
 // GLOBAL COLORS
 
+// color pallete
+
 $brown          :#725752;
 $white          :#eef0f2;
-$mummys-tomb    :#878e88;
+$grey           :#909190;
+$lightgrey      :#c0c0c0;
+$green          :#96c094;
 $lemon-brown    :#fef6c9;
 $bone           :#d4dfc7;
 
+
+// -----
+// background colors (opacity; .0)
 $bgcolor-1      :#f5c1b8d8;
-$bgcolor-2      : #878e88b4;
+$bgcolor-2      :#878e88b4;
+$bgcolor-3      :#fef6c9b4;
+$bgnav-1        :#ffffff2d;
+$bgnav-2        :#eef0f29c;
 
+
+
+// main colors
 $primary-col    : $brown;
-$second-col     : $mummys-tomb;
+$second-col     : $grey;
 
+// h1,h2,h3, p tags
 $headings       : $bone;
 $text           : $lemon-brown;

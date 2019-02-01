@@ -11,50 +11,87 @@ h3 {
   text-align: center;
   color: #d4dfc7; }
 
-p {
+p, a {
   font-family: 'Poppins', sans-serif;
   color: #fef6c9;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #909190; }
 
+.main-header .sub {
+  font-size: 2vw;
+  padding: 18vh 0 0 0;
+  align-items: center;
+  color: #d4dfc7;
+  margin: 0 300px 0 300px;
+  line-height: 3.4em; }
+.main-header .sub::after {
+  content: "";
+  display: block;
+  border-bottom: solid #d4dfc7 2.8px; }
 .main-header .title {
   font-size: 6vw;
   margin: 0 100px 0 100px; }
-.main-header .sub {
-  font-size: 2vw;
-  padding: 38vh 0 0 0;
-  align-items: center;
-  color: #d4dfc7; }
-.main-header .sub::after {
-  content: "";
-  border: 4px #d4dfc7;
-  height: 40px;
-  width: 80px;
-  background-color: #d4dfc7; }
 
 .grid .main-header {
   height: 100vh;
-  background-image: linear-gradient(#f5c1b8d8, #878e88b4), url(../images/cliff1.jpg);
+  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/cliff1.jpg);
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center; }
-.grid .navbar {
-  position: fixed, sticky;
-  background-color: aqua; }
+.grid .main-nav {
+  background-color: #ffffff2d;
+  position: sticky;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  text-align: center;
+  opacity: 0.4; }
+  .grid .main-nav ul li {
+    display: inline; }
 .grid .primary-content {
   background-color: blueviolet; }
 .grid .secondary-content {
-  background-color: teal; }
+  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/cliff1.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .grid {
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100vh 20vh 50vh 50vh 30vh;
+  grid-template-rows: 100vh auto 50vh 50vh 30vh;
   grid-template-areas: "header header header" "nav nav nav" "primary primary primary" "secondary secondary secondary" "footer footer footer"; }
 
 .main-header {
   grid-area: header; }
 
-.navbar {
+.main-nav {
   grid-area: nav; }
+
+.main-nav:hover {
+  opacity: 0.6;
+  background-color: #eef0f29c;
+  transition: 0.4s ease; }
+
+.nav-links {
+  margin-right: 4.2vw;
+  margin-left: 4.2vw;
+  background-color: #725752;
+  border-radius: 2vh;
+  padding: 0.6em;
+  width: 0.2em;
+  opacity: 0.4;
+  text-decoration: none; }
+  .nav-links.nav-links:hover {
+    background: #d4dfc7;
+    transition: 0.8s;
+    opacity: 1; }
+  .nav-links.nav-links:active {
+    background: #96c094; }
+  .nav-links a {
+    text-decoration: none; }
+  .nav-links a:hover {
+    color: #725752; }
+  .nav-links a:active {
+    color: #eef0f2; }
 
 /*# sourceMappingURL=main.css.map */

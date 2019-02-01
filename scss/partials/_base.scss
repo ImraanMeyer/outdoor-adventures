@@ -15,52 +15,65 @@ h3 {
     color: $bone;
 }
 
-p {
+p, a {
     font-family: 'Poppins', sans-serif;
     color: $text;
     font-weight: 300;
+    color: $second-col;
 }
 
 .main-header {
+
+    .sub {
+        font-size: 2vw;
+        padding: 18vh 0 0 0;
+        align-items: center;
+        color: $bone;
+        margin: 0 300px 0 300px;
+        line-height: 3.4em;
+    }
+    .sub::after {
+        content: "";
+        display: block;
+        border-bottom: solid $bone 2.8px;
+    }
+    
     .title {
         font-size: 6vw;
         margin: 0 100px 0 100px; 
     }
-
-    .sub {
-        font-size: 2vw;
-        padding: 38vh 0 0 0;
-        align-items: center;
-        color: $bone;   
-    }
-    .sub::after {
-        content: "";
-        // display: block;  
-        border: 4px $bone;
-        height: 40px;
-        width: 80px;
-        background-color: $bone;
-    }
 }
 
 .grid {
-    .main-header {  
-        // background-color: yellow;
-        height: 100vh;
-        @include background;
-        text-align: center;
-    }
+    .main {
+        &-header {
+            height: 100vh;
+            @include background;
+            text-align: center;
+        }
+        &-nav {
+            background-color: $bgnav-1;
+            position: sticky;
+            padding-top: 6vh;
+            padding-bottom: 6vh; 
+            text-align: center;
+            opacity: 0.4;
 
-    .navbar {
-        position: fixed, sticky;
-        background-color: aqua;
+            ul li{
+                display: inline;
+            }
+        }
+
     }
+        
+
+        
 
     .primary-content {
         background-color: blueviolet;
     }
 
     .secondary-content {
-        background-color: teal;
+        @include background;
     }
 }

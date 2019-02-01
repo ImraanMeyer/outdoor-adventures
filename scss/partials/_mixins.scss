@@ -1,6 +1,6 @@
 
 @mixin background {
-    background-image: linear-gradient($bgcolor-1, $bgcolor-2), url(../images/cliff1.jpg);
+    background-image: linear-gradient($bgcolor-2, $bgcolor-1), url(../images/cliff1.jpg);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
