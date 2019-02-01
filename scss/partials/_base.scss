@@ -3,9 +3,6 @@
 
 body, * {
     margin: 0;
-}
-
-* {
     box-sizing: border-box;
 }
 
@@ -15,26 +12,43 @@ h3 {
     font-family: 'Merriweather', serif;
     font-weight: 400;
     text-align: center;
-    // width: 400px;
-}
-
-h1::after {
-    content: " ";
-    display: block;
-    border: solid 2px black;
-    width: 200px;
+    color: $bone;
 }
 
 p {
     font-family: 'Poppins', sans-serif;
+    color: $text;
     font-weight: 300;
+}
+
+.main-header {
+    .title {
+        font-size: 6vw;
+        margin: 0 100px 0 100px; 
+    }
+
+    .sub {
+        font-size: 2vw;
+        padding: 38vh 0 0 0;
+        align-items: center;
+        color: $bone;   
+    }
+    .sub::after {
+        content: "";
+        // display: block;  
+        border: 4px $bone;
+        height: 40px;
+        width: 80px;
+        background-color: $bone;
+    }
 }
 
 .grid {
     .main-header {  
-        background-color: yellow;
+        // background-color: yellow;
         height: 100vh;
         @include background;
+        text-align: center;
     }
 
     .navbar {

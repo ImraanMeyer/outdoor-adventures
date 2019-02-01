@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather|Poppins");
 body, * {
   margin: 0;
-}
-
-* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -14,27 +11,45 @@ h3 {
   font-family: 'Merriweather', serif;
   font-weight: 400;
   text-align: center;
-}
-
-h1::after {
-  content: " ";
-  display: block;
-  border: solid 2px black;
-  width: 200px;
+  color: #d4dfc7;
 }
 
 p {
   font-family: 'Poppins', sans-serif;
+  color: #fef6c9;
   font-weight: 300;
 }
 
+.main-header .title {
+  font-size: 6vw;
+  margin: 0 100px 0 100px;
+}
+
+.main-header .sub {
+  font-size: 2vw;
+  padding: 38vh 0 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #d4dfc7;
+}
+
+.main-header .sub::after {
+  content: "";
+  border: 4px #d4dfc7;
+  height: 40px;
+  width: 80px;
+  background-color: #d4dfc7;
+}
+
 .grid .main-header {
-  background-color: yellow;
   height: 100vh;
-  background-image: url(../images/cliff1.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5c1b8d8), to(#878e88b4)), url(../images/cliff1.jpg);
+  background-image: linear-gradient(#f5c1b8d8, #878e88b4), url(../images/cliff1.jpg);
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .grid .navbar {
