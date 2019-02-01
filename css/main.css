@@ -1,3 +1,7 @@
-
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Poppins");
+h1,
+h2,
+h3 {
+  font-family: "Merriweather"; }
 
 /*# sourceMappingURL=main.css.map */

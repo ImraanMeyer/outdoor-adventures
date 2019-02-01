@@ -1,8 +1,13 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AGAA,OAAO,CAAC,mEAAI;AAEZ,AAAA,EAAE;AACF,EAAE;AACF,EAAE,CAAC;EACC,WAAW,EAAE,cACjB;CAAC",
     "sources": [
-        "main.scss"
+        "main.scss",
+        "partials/_variables.scss",
+        "partials/_mixins.scss",
+        "partials/_base.scss",
+        "partials/_layout.scss",
+        "partials/_components.scss"
     ],
     "names": [],
     "file": "main.css"
