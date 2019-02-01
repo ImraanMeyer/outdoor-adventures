@@ -30,19 +30,23 @@ p {
     font-weight: 300;
 }
 
-.main-header {
+.grid {
+    .main-header {  
         background-color: yellow;
-}
+        height: 100vh;
+        @include background;
+    }
 
-.navbar {
-    position: fixed, sticky;
-    background-color: aqua;
-}
+    .navbar {
+        position: fixed, sticky;
+        background-color: aqua;
+    }
 
-.primary-content {
-    background-color: blueviolet;
-}
+    .primary-content {
+        background-color: blueviolet;
+    }
 
-.secondary-content {
-    background-color: teal;
+    .secondary-content {
+        background-color: teal;
+    }
 }

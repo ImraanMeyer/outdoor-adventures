@@ -22,17 +22,19 @@ p {
   font-family: 'Poppins', sans-serif;
   font-weight: 300; }
 
-.main-header {
-  background-color: yellow; }
-
-.navbar {
+.grid .main-header {
+  background-color: yellow;
+  height: 100vh;
+  background-image: url(../images/cliff1.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.grid .navbar {
   position: fixed, sticky;
   background-color: aqua; }
-
-.primary-content {
+.grid .primary-content {
   background-color: blueviolet; }
-
-.secondary-content {
+.grid .secondary-content {
   background-color: teal; }
 
 .grid {
