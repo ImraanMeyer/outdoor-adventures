@@ -1,71 +1,274 @@
-/*
-Error: Invalid CSS after "}": expected "}", was ""
-        on line 84 of scss/partials/_base.scss
-        from line 5 of scss/main.scss
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Poppins");
+h1,
+h2 {
+  color: #d4dfc7; }
 
-79:     }
-80: 
-81:     .secondary-content {
-82:         @include background;
-83:     }
-84: }
+h3 {
+  color: #725752;
+  padding: 0.8em; }
 
-Backtrace:
-scss/partials/_base.scss:84
-scss/main.scss:5
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:1308:in `expected'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:1238:in `expected'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:1233:in `tok!'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:690:in `block'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:681:in `ruleset'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:707:in `block_child'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/engine.rb:414:in `_to_tree'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/engine.rb:321:in `to_tree'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 84 of scss/partials/_base.scss\A         from line 5 of scss/main.scss\A \A 79:     }\A 80: \A 81:     .secondary-content {\A 82:         @include background;\A 83:     }\A 84: }"; }
+p {
+  color: #fef6c9; }
+
+.sub {
+  color: #d4dfc7; }
+
+.main-nav {
+  background: #ffffff09; }
+
+.main-nav:hover {
+  background: #eef0f29c;
+  color: #fef6c9; }
+
+.nav-list-links {
+  background: #725752; }
+
+.nav-list-links:hover {
+  background: #909190; }
+
+.nav-list-links:active {
+  background: #455d80; }
+
+.dropdown-content {
+  background: #455d80b4; }
+
+.dropdown-content:hover {
+  background: #455d80 !important; }
+
+.primary-content {
+  background: #725752; }
+
+.secondary-content {
+  background: #909190; }
+
+.figure {
+  background-color: #d4dfc7;
+  border-top: #725752 1em solid; }
+
+body {
+  background: #725752;
+  scroll-behavior: smooth 200ms; }
+
+body, * {
+  margin: 0;
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3 {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  text-align: center; }
+
+h2 {
+  margin: 1.6em; }
+
+p, a, button {
+  font-family: 'Poppins', sans-serif;
+  color: #fef6c9;
+  font-weight: 300;
+  color: #eef0f2; }
+
+.grid .main-header {
+  height: 100vh;
+  text-align: center;
+  background-blend-mode: multiply;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/cliff-crop.jpg); }
+  .grid .main-header .sub {
+    font-size: 2vw;
+    padding: 18vh 0 0 0;
+    align-items: center;
+    margin: 0 300px 0 300px;
+    line-height: 3.4em; }
+  .grid .main-header .sub::after {
+    content: "";
+    display: block;
+    border-bottom: solid #d4dfc7 2.8px; }
+  .grid .main-header .title {
+    font-size: 6vw;
+    margin: 0 100px 0 100px; }
+.grid .main-nav {
+  position: sticky;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  text-align: center; }
+  .grid .main-nav .main-nav:hover {
+    background-color: #455d80;
+    transition: 0.4s ease; }
+  .grid .main-nav ul li {
+    display: block;
+    padding: 0; }
+  .grid .main-nav .nav-list-links {
+    padding: 1em;
+    border-radius: 0.25rem; }
+  .grid .main-nav .nav-list-links:hover {
+    color: #d4dfc7;
+    transition: 0.4s; }
+  .grid .main-nav .nav-list-links:active,
+  .grid .main-nav .dropbtn:active {
+    color: #eef0f2;
+    opacity: 0.85; }
+  .grid .main-nav .dropdown {
+    display: block; }
+    .grid .main-nav .dropdown .dropdown-content {
+      display: none;
+      position: relative;
+      z-index: 1;
+      padding: 1em;
+      color: #fef6c9;
+      width: fit-content;
+      height: fit-content; }
+  .grid .main-nav .dropdown:hover .dropdown-content {
+    display: block;
+    margin: -14px 0 0 0;
+    transition: all 200ms;
+    border-radius: 0.25rem;
+    top: 32px;
+    z-index: 1;
+    width: auto;
+    padding: 1.2em; }
+  .grid .main-nav .dropdown-list {
+    min-width: 160px;
+    padding: 0; }
+  .grid .main-nav .nav-list-links.dropdown {
+    height: 3.6em;
+    width: 150px;
+    display: block; }
+
+.primary-content {
+  max-width: 1000px;
+  margin: 1.2em auto;
+  height: 40vh;
+  padding: 2em;
+  text-align: center;
+  text-indent: 2em; }
+
+.secondary-content {
+  padding: 2em;
+  text-align: center;
+  height: auto; }
+
+footer {
+  background-blend-mode: multiply;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/cliff-crop.jpg);
+  height: 50vh; }
+
+.grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 100vh 100vh 100vh 30vh;
+  grid-template-areas: "nav nav nav" "header header header" "primary primary primary" "secondary secondary secondary" "footer footer footer"; }
+
+.main-header {
+  grid-area: header; }
+
+.main-nav {
+  grid-area: nav; }
+  .main-nav .main-nav-ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0; }
+    .main-nav .main-nav-ul .nav-list-links {
+      width: fit-content;
+      height: fit-content;
+      display: flex; }
+
+.primary-content {
+  grid-area: primary; }
+
+.secondary-content {
+  grid-area: secondary; }
+  .secondary-content .activty-grid {
+    display: grid;
+    max-width: 1150px;
+    margin: 0 auto;
+    grid-gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "fig1 fig2 fig3" "fig4 fig5 fig6"; }
+  .secondary-content .figure {
+    height: 22rem; }
+    .secondary-content .figure p {
+      color: #725752; }
+  .secondary-content .figure1 {
+    grid-area: fig1; }
+  .secondary-content .figure2 {
+    grid-area: fig2; }
+  .secondary-content .figure3 {
+    grid-area: fig3; }
+  .secondary-content .figure4 {
+    grid-area: fig4; }
+  .secondary-content .figure5 {
+    grid-area: fig5; }
+  .secondary-content .figure6 {
+    grid-area: fig6; }
+
+.main-footer {
+  grid-area: footer; }
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none; }
+
+a:hover {
+  color: #d4dfc7; }
+
+a:active {
+  color: #eef0f2; }
+
+.arrow {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #eef0f2;
+  border-right: 5px solid #eef0f2;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite; }
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s; }
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s; }
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px); } }
+.grid-imgs {
+  height: auto;
+  max-width: 100%;
+  width: auto; }
+
+.figure {
+  padding: 1em;
+  padding-top: 0;
+  opacity: 0.8;
+  transition: 0.4s ease-in; }
+
+.figure:hover {
+  opacity: 1;
+  transition: 0.5s ease-out; }
+
+/*# sourceMappingURL=main.css.map */

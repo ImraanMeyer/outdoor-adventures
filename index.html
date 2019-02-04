@@ -11,21 +11,46 @@
     <header class="main-header">
         <!-- navbar starts here -->
             <nav class="main-nav">
-                    <ul>
-                        <li class="nav-links">
+                    <ul class="main-nav-ul">
+                        <li class="nav-list-links one">
                             <!-- ul links icons -->
                             <a href="index.html"> Home  </a>
                         </li>
                         
-                        <li class="nav-links">
+                        <li class="nav-list-links dropdown">
                             <a href="#cat"> Catergories</a>
+                            <ul class="dropdown-content">
+                                    <li class="dropdown-list-item">
+                                        <a href="#">Camping</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-list-item">
+                                        <a href="#">Canoeing</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-list-item">
+                                        <a href="#">Climbing</a>
+                                    </li>
+
+                                    <li class="dropdown-list-item">
+                                        <a href="#">Fishing</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-list-item">
+                                        <a href="#">Hunting</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-list-item">
+                                        <a href="#">Hiking</a>
+                                    </li>
+                                </ul>
                         </li>
         
-                        <li class="nav-links">
-                            <a href="gallery.html"> Gallery</a>
+                        <li class="nav-list-links three">
+                            <a href="gallery.html">Gallery</a>
                         </li>
         
-                        <li class="nav-links">
+                        <li class="nav-list-links four">
                             <a href="contact.html"> Contact</a>
                         </li>
                     </ul>
@@ -34,23 +59,69 @@
         
         <p class="sub">The Great Outdoors</p>
         <h1 class="title">Cape Town, South Africa</h1>
+
+        <a href="#primary-link">
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
     </header>
 
     
-    <section class="primary-content">
-        <h1>Looking for something new?</h1>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis molestias architecto repudiandae nisi quibusdam illum rerum et doloribus asperiores ipsam?</p>
-
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, quibusdam.</p>
-
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis laboriosam vitae ratione, non placeat quae porro veritatis quidem mollitia ducimus reiciendis modi voluptates consequatur molestiae accusamus laudantium repellendus, totam corporis.</p>
+    <section class="primary-content" id="primary-link">
+        <h2>Looking for something new?</h2>
+        <p>
+            When the chaos of city life gets too much, escape into the wild and stay the night, there are so many beautiful hiking trails in the Western Cape that it's hard to find a place to start.
+        </p>
     </section>
 
     <section class="secondary-content">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, nemo!
-        </p>
+        <h2>Get Your Fix</h2>
+
+        <article class="activty-grid">
+            <section class="figure figure1">
+                <h3>Camping</h3>
+                <img src="images/camp.jpg" alt="Camping" class="grid-imgs">
+                <p>Lorem ipsum dolor sit amet </p>
+            </section>
+            
+            <section class="figure figure2">
+                <h3>Canoeing</h3>
+                
+                <img class="grid-imgs" src="images/canoe.jpg" alt="Canoeing">
+
+                <p>consectetur, adipisicing elit. Obcaecati, nam.</p>
+            </section>
+            
+            <section class="figure figure3">
+                <h3>Climbing</h3>
+
+                <img src="images/climbing.jpg" alt="Climbing" class="grid-imgs">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ex?</p>
+            </section>
+
+            <section class="figure figure4">
+                <h3>Fishing</h3>
+                
+                <img src="images/fishing.jpg" alt="Fishing" class="grid-imgs">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, consequatur.</p>
+            </section>
+            
+            <section class="figure figure5">
+                <h3>Hunting</h3>
+                <img class="grid-imgs" src="images/hunt.jpg" alt="Hunting">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, sint!</p>
+            </section>
+            
+            <section class="figure figure6">
+                <h3>Hiking</h3>
+                <img src="images/hike.jpg" alt="Hiking" class="grid-imgs">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quae!</p>
+            </section>
+        </article>
     </section>
 
     <footer class="main-footwer">

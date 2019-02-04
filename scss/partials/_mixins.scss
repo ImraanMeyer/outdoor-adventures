@@ -1,12 +1,30 @@
 
 @mixin background {
-    background-image: linear-gradient($bgcolor-2, $bgcolor-1), url(../images/cliff1.jpg);
+    background-blend-mode: multiply;
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    background-image: linear-gradient($bgcolor-2, $bgcolor-1),  url(../images/cliff-crop.jpg);
+}
+
+@mixin gradient {
+    background-image: linear-gradient($bgcolor-2, $bgcolor-1);
 }
 
 @mixin center {
     justify-self: center;
     text-align: center;
+}
+
+@mixin opacity-on { 
+    opacity: 0.8; 
+    transition: 0.4s ease-in;
+}
+@mixin opacity-reveal {
+    opacity: 1;
+    transition: 0.5s ease-out;
+}
+
+@mixin border {
+    border-top: $bone 2em solid;
 }

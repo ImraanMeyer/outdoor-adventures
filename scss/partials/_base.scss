@@ -1,6 +1,11 @@
 // Global fonts
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Poppins');
 
+body {
+    background: $primary-col;
+    scroll-behavior: smooth 200ms;
+}
+
 body, * {
     margin: 0;
     box-sizing: border-box;
@@ -12,27 +17,30 @@ h3 {
     font-family: 'Merriweather', serif;
     font-weight: 400;
     text-align: center;
-    color: $bone;
 }
 
-p, a {
+h2 {
+    margin: 1.6em;
+}
+
+p, a, button {
     font-family: 'Poppins', sans-serif;
     color: $text;
     font-weight: 300;
-    color: $second-col;
+    color: $white;
 }
 
 .grid {
     .main {
         &-header {
             height: 100vh;
-            @include background;
             text-align: center;
+            @include background;
+            
             .sub {
                 font-size: 2vw;
                 padding: 18vh 0 0 0;
                 align-items: center;
-                color: $bone;
                 margin: 0 300px 0 300px;
                 line-height: 3.4em;
             }
@@ -48,37 +56,90 @@ p, a {
         }
 
         &-nav {
-            background-color: $bgnav-1;
             position: sticky;
-            padding-top: 6vh;
-            padding-bottom: 6vh; 
+            padding-top: 2vh;
+            padding-bottom: 2vh; 
             text-align: center;
-                ul li{
-                display: inline;
-                .nav-links  {
-                    margin-right: 4.2vw;
-                    margin-left: 4.2vw;
-                    // choose different allernate color out-standing? 
-                    background-color: $brown;
-                    border-radius: 2vh;
-                    padding: 0.6em;
-                    width: 0.2em;
-                    text-decoration: none;
-        }
-
-    }
-        }
         
+                
+            .main-nav:hover {
+                background-color: $dustyblue;
+                transition: 0.4s ease;
+            }
 
+                ul li{
+                display: block;
+                padding: 0;
+            }
+                .nav-list-links {
+                    padding: 1em;
+                    border-radius: 0.25rem;
+                }                     
+                    
+                .nav-list-links:hover {
+                    color: $bone;
+                    transition: 0.4s;
+                }
+                .nav-list-links:active,
+                .dropbtn:active {
+                    color: $white;
+                    opacity: 0.85;
+                }
+
+                .dropdown {
+                    display: block;
+                    
+                    .dropdown-content {
+                        display: none;
+                        position: relative;
+                        z-index: 1;
+                        padding: 1em;
+                        color: $text;
+                        width: fit-content;
+                        height: fit-content;
+                    }   
+                }
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                    margin: -14px 0 0 0;
+                    transition: all 200ms ;
+                    border-radius: 0.25rem; 
+                    top: 32px;
+                    z-index: 1;
+                    width: auto;
+                    padding: 1.2em;
+                }
+                    .dropdown-list {
+                        min-width: 160px;
+                        padding: 0;    
+                    }
+
+                    .nav-list-links.dropdown {
+                        height: 3.6em;
+                        width: 150px;
+                        display: block;
+                    }
+            }
+    }
+}
         
 
     .primary-content {
-        background-color: blueviolet;
-        height: 80vh;
+        max-width: 1000px;
+        margin: 1.2em auto;
+        height: 40vh;
         padding: 2em;
+        text-align: center;
+        text-indent: 2em;
     }
 
     .secondary-content {
-        @include background;
+        padding: 2em;
+        text-align: center;
+        height: auto;
     }
-}
+
+    footer {
+        @include background;
+        height: 50vh;
+    }

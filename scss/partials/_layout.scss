@@ -1,9 +1,9 @@
 .grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100vh auto 100vh 50vh 30vh;
+    grid-template-rows:  auto 100vh 100vh 100vh 30vh;
     grid-template-areas: 
-        "header header header"
         "nav nav nav"
+        "header header header"
         "primary primary primary"
         "secondary secondary secondary"
         "footer footer footer";
@@ -15,7 +15,25 @@
 
 .main-nav {
     grid-area: nav;
+
+    .main-nav-ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        padding: 0;
+        
+        .nav-list-links {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+        }
+
+        
+    }
 }
+
 
 .primary-content {
     grid-area: primary;
@@ -23,6 +41,44 @@
 
 .secondary-content {
     grid-area: secondary;
+
+    .activty-grid {
+        display: grid;
+        max-width: 1150px;
+        margin: 0 auto;
+        grid-gap: 2em;
+
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+            "fig1 fig2 fig3"
+            "fig4 fig5 fig6"
+        }
+
+        .figure {
+            height: 22rem;
+                p {
+                    color: $brown;
+                }
+        }
+        .figure1 {
+            grid-area: fig1;
+        }
+        .figure2 {
+            grid-area: fig2;
+        }
+        .figure3 {
+            grid-area: fig3;
+        }
+        .figure4 {
+            grid-area: fig4;
+        }
+        .figure5 {
+            grid-area: fig5;
+        }
+        .figure6 {
+            grid-area: fig6;
+        }
 }
 
 .main-footer {

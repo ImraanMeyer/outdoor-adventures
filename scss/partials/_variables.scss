@@ -9,13 +9,14 @@ $lightgrey      :#c0c0c0;
 $green          :#96c094;
 $lemon-brown    :#fef6c9;
 $bone           :#d4dfc7;
-
+$dustyblue      :#455d80;
 
 // -----
 // background colors (opacity; .0)
 $bgcolor-1      :#f5c1b8d8;
 $bgcolor-2      :#878e88b4;
 $bgcolor-3      :#fef6c9b4;
+$bgcolor-4      :#455d80b4;
 $bgnav-1        :#ffffff09;
 $bgnav-2        :#eef0f29c;
 
@@ -28,3 +29,61 @@ $second-col     : $grey;
 // h1,h2,h3, p tags
 $headings       : $bone;
 $text           : $lemon-brown;
+
+h1, 
+h2 {
+    color: $headings;
+}
+
+h3 {
+    color: $brown;
+    padding: 0.8em;
+}
+
+p {
+    color: $text;
+}
+
+.sub {
+    color: $bone;
+}
+
+.main-nav {
+    background: $bgnav-1;
+}
+.main-nav:hover {
+    background: $bgnav-2;
+    color: $text;
+}
+
+.nav-list-links {
+    background: $primary-col;
+}
+.nav-list-links:hover {
+    background: $second-col;
+}
+.nav-list-links:active {
+    background: $dustyblue;
+}
+
+.dropdown-content {
+    background: $bgcolor-4;
+}
+.dropdown-content:hover {
+    background: $dustyblue !important;
+}
+
+
+.primary-content {
+    background: $primary-col;
+}
+
+.secondary-content {
+    background: $second-col;
+}
+
+.figure {
+    background-color: $headings;
+    border-top: $primary-col 1em solid;
+}
+
