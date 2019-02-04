@@ -28,3 +28,14 @@
 @mixin border {
     border-top: $bone 2em solid;
 }
+
+// use after element
+@mixin underline {
+    content: '';
+    display: block;
+    color: inherit;
+    width: auto;
+    height: 0.2rem;
+    text-align: left !important;
+    margin-top: 6px; 
+}

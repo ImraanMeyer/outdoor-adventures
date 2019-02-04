@@ -19,6 +19,7 @@ $bgcolor-3      :#fef6c9b4;
 $bgcolor-4      :#455d80b4;
 $bgnav-1        :#ffffff09;
 $bgnav-2        :#eef0f29c;
+$footer         :#725752a4;
 
 
 
@@ -34,6 +35,16 @@ h1,
 h2 {
     color: $headings;
 }
+h2::after {
+    background-color: $headings;
+    @include underline;
+    text-align: left;
+}
+
+h3::after {
+    @include underline;
+    background-color: $second-col;
+}
 
 h3 {
     color: $brown;
@@ -42,6 +53,11 @@ h3 {
 
 p {
     color: $text;
+}
+
+.btn {
+    color: $white;
+    font-size: 0.8em;
 }
 
 .sub {

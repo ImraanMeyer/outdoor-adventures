@@ -3,7 +3,8 @@
 
 body {
     background: $primary-col;
-    scroll-behavior: smooth 200ms;
+    scroll-behavior: smooth;
+    transition: 0.4s ease-in-out;
 }
 
 body, * {
@@ -20,10 +21,11 @@ h3 {
 }
 
 h2 {
-    margin: 1.6em;
+    margin: 1.6em 10em;
 }
 
-p, a, button {
+p, 
+a   {
     font-family: 'Poppins', sans-serif;
     color: $text;
     font-weight: 300;
@@ -37,21 +39,21 @@ p, a, button {
             text-align: center;
             @include background;
             
-            .sub {
-                font-size: 2vw;
-                padding: 18vh 0 0 0;
-                align-items: center;
-                margin: 0 300px 0 300px;
-                line-height: 3.4em;
-            }
-            .sub::after {
-                content: "";
-                display: block;
-                border-bottom: solid $bone 2.8px;
-            }
-            .title {
-                font-size: 6vw;
-                margin: 0 100px 0 100px; 
+                .sub {
+                    font-size: 2vw;
+                    padding: 18vh 0 0 0;
+                    align-items: center;
+                    margin: 0 300px 0 300px;
+                    line-height: 3.4em;
+                }
+                .sub::after {
+                    content: "";
+                    display: block;
+                    border-bottom: solid $bone 2.8px;
+                }
+                .title {
+                    font-size: 6vw;
+                    margin: 0 100px 0 100px; 
             }
         }
 
@@ -61,7 +63,6 @@ p, a, button {
             padding-bottom: 2vh; 
             text-align: center;
         
-                
             .main-nav:hover {
                 background-color: $dustyblue;
                 transition: 0.4s ease;
@@ -70,21 +71,19 @@ p, a, button {
                 ul li{
                 display: block;
                 padding: 0;
-            }
-                .nav-list-links {
-                    padding: 1em;
-                    border-radius: 0.25rem;
-                }                     
-                    
-                .nav-list-links:hover {
-                    color: $bone;
-                    transition: 0.4s;
                 }
-                .nav-list-links:active,
-                .dropbtn:active {
-                    color: $white;
-                    opacity: 0.85;
-                }
+                    .nav-list-links {
+                        padding: 1em;
+                        border-radius: 0.25rem;
+                    }                      
+                    .nav-list-links:hover {
+                        color: $bone;
+                        transition: 0.4s;
+                    }
+                    .nav-list-links:active {
+                        color: $white;
+                        opacity: 0.85;
+                    }
 
                 .dropdown {
                     display: block;
@@ -128,18 +127,36 @@ p, a, button {
         max-width: 1000px;
         margin: 1.2em auto;
         height: 40vh;
-        padding: 2em;
         text-align: center;
         text-indent: 2em;
+
     }
 
     .secondary-content {
-        padding: 2em;
+        padding: 2em 2em 4em;
         text-align: center;
         height: auto;
+        
+        .figure {
+            height: auto;
+
+                h3 {
+                    font-size: x-large;
+                }
+
+                p {
+                    color: $brown;
+                    background-color: $green;
+                    padding: 0.25rem;
+                }
+            }
     }
 
     footer {
         @include background;
-        height: 50vh;
+        background-color: $footer;
+        height: 30vh;
+        text-align: center;
+        display: block;
+        padding-top: 10vh;
     }

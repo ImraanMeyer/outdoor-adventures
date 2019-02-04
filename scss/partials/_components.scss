@@ -10,6 +10,25 @@ a:active {
     color: $white;}
 
 
+.btn {
+    border: none;
+    outline: none;
+    padding: 1em;
+    text-align: center;
+}
+
+.btn1 {
+    background: $dustyblue;
+}
+.btn1:hover,
+.btn2:hover {
+    background: $brown;
+}
+.btn2 {
+    background: $second-col;
+}
+
+
 // scroll down arrow animation
 .arrow{
     position: absolute;
@@ -60,6 +79,7 @@ a:active {
     padding: 1em;
     padding-top: 0;
     @include opacity-on;
+    text-align: left;
 }
 .figure:hover {
     @include opacity-reveal;
