@@ -10,6 +10,7 @@ $green          :#96c094;
 $lemon-brown    :#fef6c9;
 $bone           :#d4dfc7;
 $dustyblue      :#455d80;
+$tealblue       :#74a4ac;
 
 // -----
 // background colors (opacity; .0)
@@ -17,9 +18,11 @@ $bgcolor-1      :#f5c1b8d8;
 $bgcolor-2      :#878e88b4;
 $bgcolor-3      :#fef6c9b4;
 $bgcolor-4      :#455d80b4;
+$bgcolor-5      :#725752c9;
 $bgnav-1        :#ffffff09;
 $bgnav-2        :#eef0f29c;
 $footer         :#725752a4;
+$formbg-1       :#455d80;
 
 
 
@@ -35,11 +38,11 @@ $text           : $lemon-brown;
     background: $primary-col;
 }
 .contact-page {
-    background-color: $second-col;
-    background-image: url(../images/mtn2.jpg);
-    background-position: bottom;
+    background-image: linear-gradient($bgcolor-2,$bgnav-2 ), url(../images/mtn1.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: color-burn;
 }
 
 h1, 
@@ -54,6 +57,13 @@ h2::after {
 
 .form-title {
     padding: 20px 0 0 0;
+    color: $headings;
+    margin: 0 auto;
+    max-width: 500px;
+}
+.form-title::after {
+    background: $headings;
+    @include underline;
 }
 
 h3::after {

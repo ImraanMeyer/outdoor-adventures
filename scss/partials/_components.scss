@@ -1,3 +1,5 @@
+
+
 // try hover effects hover/actove wobble
 a   {
     text-decoration: none;
@@ -86,4 +88,13 @@ a:active {
     @include opacity-reveal;
 }
 
+// contact page ---------------------------
 
+.fab {
+    font-size: 8vh;
+    padding:0 0.6em 1em 0.6em;
+    color: $dustyblue;
+}
+.fab:hover {
+    color: $brown;
+}

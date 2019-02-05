@@ -4,11 +4,12 @@
 }
 
 .contact-page {
-  background-color: #909190;
-  background-image: url(../images/mtn2.jpg);
-  background-position: bottom;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#878e88b4), to(#eef0f29c)), url(../images/mtn1.jpg);
+  background-image: linear-gradient(#878e88b4, #eef0f29c), url(../images/mtn1.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-blend-mode: color-burn;
 }
 
 h1,
@@ -30,6 +31,20 @@ h2::after {
 
 .form-title {
   padding: 20px 0 0 0;
+  color: #d4dfc7;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.form-title::after {
+  background: #d4dfc7;
+  content: '';
+  display: block;
+  color: inherit;
+  width: auto;
+  height: 0.2rem;
+  text-align: left !important;
+  margin-top: 6px;
 }
 
 h3::after {
@@ -130,28 +145,24 @@ h2 {
 }
 
 p,
-a,
-.contact-form,
-input[placeholder] {
+a {
   font-family: 'Poppins', sans-serif;
   color: #fef6c9;
   font-weight: 300;
   color: #eef0f2;
 }
 
-option[value] {
-  font-family: 'Poppins', sans-serif;
-  color: #fef6c9;
-  font-weight: 300;
-  background-color: #909190;
-}
-
+option[value],
+.contact-form,
+input[placeholder],
 select[id],
 textarea[placeholder] {
   font-family: 'Poppins', sans-serif;
   color: #fef6c9;
   font-weight: 300;
-  color: #909190;
+  color: #c0c0c0;
+  font-weight: 400;
+  background-color: #eef0f2;
 }
 
 .grid .main-header {
@@ -306,21 +317,21 @@ footer {
   padding-top: 10vh;
 }
 
-.contact-form {
-  max-width: 650px;
+.contact-page .contact-form {
+  max-width: 450px;
   margin: 2em auto;
   border-radius: 0.65rem;
-  background-color: #878e88b4;
+  background-color: #725752c9;
   padding: 20px;
 }
 
-.contact-form input[type=text],
-.contact-form input[type=email],
-.contact-form select,
-.contact-form textarea {
+.contact-page .contact-form input[type=text],
+.contact-page .contact-form input[type=email],
+.contact-page .contact-form select,
+.contact-page .contact-form textarea {
   width: 100%;
   padding: 12px;
-  border: 0.2rem solid #455d80;
+  border: 0.2rem solid #909190;
   border-radius: 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -330,9 +341,9 @@ footer {
   outline: none;
 }
 
-.contact-form input[type=submit] {
+.contact-page .contact-form input[type=submit] {
   background-color: #96c094;
-  color: white;
+  color: #d4dfc7;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -340,8 +351,15 @@ footer {
   outline: none;
 }
 
-.contact-form input[type=submit]:hover {
-  background-color: #725752;
+.contact-page .contact-form input[type=submit]:hover {
+  background-color: #455d80;
+}
+
+.contact-page .footer-form {
+  background-color: #96c094;
+  height: 30vh;
+  text-align: center;
+  padding: 2em;
 }
 
 .grid {
@@ -411,7 +429,7 @@ footer {
 .secondary-content .activty-grid {
   display: -ms-grid;
   display: grid;
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 0 auto;
   grid-gap: 2em;
   -ms-grid-columns: (1fr)[3];
@@ -633,5 +651,15 @@ a:active {
   opacity: 1;
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
+}
+
+.fab {
+  font-size: 8vh;
+  padding: 0 0.6em 1em 0.6em;
+  color: #455d80;
+}
+
+.fab:hover {
+  color: #725752;
 }
 /*# sourceMappingURL=main.css.map */
