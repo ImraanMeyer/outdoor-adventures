@@ -31,6 +31,17 @@ $second-col     : $grey;
 $headings       : $bone;
 $text           : $lemon-brown;
 
+.grid {
+    background: $primary-col;
+}
+.contact-page {
+    background-color: $second-col;
+    background-image: url(../images/mtn2.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 h1, 
 h2 {
     color: $headings;
@@ -39,6 +50,10 @@ h2::after {
     background-color: $headings;
     @include underline;
     text-align: left;
+}
+
+.form-title {
+    padding: 20px 0 0 0;
 }
 
 h3::after {

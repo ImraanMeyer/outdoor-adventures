@@ -13,7 +13,7 @@ a:active {
 .btn {
     border: none;
     outline: none;
-    padding: 1em;
+    padding: 2em;
     text-align: center;
 }
 
@@ -70,9 +70,9 @@ a:active {
 // img in activty grid
 
 .grid-imgs {
-    height: auto;
+    height:250px;
     max-width: 100%;
-    width: auto;
+    // width: 250px;
 }
 
 .figure {
@@ -80,7 +80,10 @@ a:active {
     padding-top: 0;
     @include opacity-on;
     text-align: left;
+    height: auto;
 }
 .figure:hover {
     @include opacity-reveal;
 }
+
+
