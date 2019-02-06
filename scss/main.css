@@ -341,7 +341,11 @@ footer {
   height: 30vh;
   text-align: center;
   display: block;
-  padding-top: 10vh;
+  padding-top: 2vh;
+}
+
+footer .last-p {
+  margin-bottom: 40px;
 }
 
 .contact-page .contact-form {
@@ -702,7 +706,20 @@ a:active {
           transform: translate(-50%, -50%);
 }
 
-.down-arrow span {
+.up-arrow {
+  position: absolute;
+  right: 50.5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.up-arrow span {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.down-arrow span,
+.up-arrow span {
   display: block;
   width: 30px;
   height: 30px;
@@ -710,16 +727,18 @@ a:active {
   border-right: 5px solid #eef0f2;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  margin: -10px;
+  margin: -20px;
   -webkit-animation: animate 2s infinite;
           animation: animate 2s infinite;
 }
 
+.up-arrow span:nth-child(2),
 .down-arrow span:nth-child(2) {
   -webkit-animation-delay: -0.2s;
           animation-delay: -0.2s;
 }
 
+.up-arrow span:nth-child(3),
 .down-arrow span:nth-child(3) {
   -webkit-animation-delay: -0.4s;
           animation-delay: -0.4s;
