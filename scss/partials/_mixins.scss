@@ -1,14 +1,23 @@
+@mixin text {
+    font-family: 'Poppins', sans-serif;
+    color: $text;
+    font-weight: 300;
+}
 
 @mixin background {
+    background-image: linear-gradient($bgcolor-2, $bgcolor-1),  url(../images/cliff-crop.jpg);
     background-blend-mode: multiply;
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: linear-gradient($bgcolor-2, $bgcolor-1),  url(../images/cliff-crop.jpg);
 }
 
-@mixin gradient {
-    background-image: linear-gradient($bgcolor-2, $bgcolor-1);
+@mixin formbg {
+    background-image: url(../images/mtn2.jpg);
+    background-blend-mode: multiply;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @mixin center {
@@ -28,6 +37,7 @@
 @mixin border {
     border-top: $bone 2em solid;
 }
+
 
 // use after element
 @mixin underline {

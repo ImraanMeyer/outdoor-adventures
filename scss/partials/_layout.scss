@@ -1,6 +1,7 @@
 .grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:  auto 100vh 100vh 100vh 30vh;
+    grid-template-rows:  auto 100vh 40vh auto 30vh;
     grid-template-areas: 
         "nav nav nav"
         "header header header"
@@ -15,25 +16,7 @@
 
 .main-nav {
     grid-area: nav;
-
-    .main-nav-ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        text-align: center;
-        padding: 0;
-        
-        .nav-list-links {
-            width: fit-content;
-            height: fit-content;
-            display: flex;
-        }
-
-        
-    }
 }
-
 
 .primary-content {
     grid-area: primary;
@@ -44,17 +27,16 @@
 
     .activty-grid {
         display: grid;
-        max-width: 1150px;
+        max-width: 1200px;
         margin: 0 auto;
         grid-gap: 2em;
 
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
+        grid-template-rows: repeat(2, auto);
         grid-template-areas: 
             "fig1 fig2 fig3"
             "fig4 fig5 fig6"
         }
-        
         
         .figure1 {
             grid-area: fig1;
@@ -74,22 +56,49 @@
         .figure6 {
             grid-area: fig6;
         }
-            .card-bottom-grid {
-                display: grid;
-                grid-template-rows: auto;
-                grid-template-columns: repeat(2, auto);
+            .figure {
+                display:grid;
+                grid-template-rows: auto auto auto auto;
+                grid-template-columns: 1fr;
                 grid-template-areas: 
-                    "read   action";
+                    "title"
+                    "img"
+                    "text"
+                    "btns";
             }
-
-            .btn1 {
-                grid-area: read;
-            }
-            .btn2 {
-                grid-area: action;
-            }
+                .card-title {
+                    grid-area: title;
+                }
+                .grid-imgs {
+                    grid-area: img;
+                }
+                .card-text {
+                    grid-area: text;
+                }
+                .card-bottom-grid {
+                    grid-area: btns;
+                    display: grid;
+                    grid-template-rows: auto;
+                    grid-template-columns: repeat(2, auto);
+                    grid-template-areas: 
+                        "read   action";
+                }
+                    .btn1 {
+                        grid-area: read;
+                    }
+                    .btn2 {
+                        grid-area: action;
+                    }
 }
 
 .main-footer {
     grid-area: footer;
+}
+
+// galler page ------------------------------------ //
+.gallery-container  {
+    display: grid;
+    grid-gap: 0.45rem;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(auto, 200px);  
 }

@@ -1,8 +1,9 @@
 // Global fonts
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Poppins');
 
-body {
-    background: $primary-col;
+.grid,
+.gallery-page,
+.contact-page {
     scroll-behavior: smooth;
     transition: 0.4s ease-in-out;
 }
@@ -25,11 +26,20 @@ h2 {
 }
 
 p, 
-a   {
-    font-family: 'Poppins', sans-serif;
-    color: $text;
-    font-weight: 300;
+a {
+    @include text;
     color: $white;
+}
+
+option[value],
+.contact-form,
+input[placeholder],
+select[id],
+textarea[placeholder] {
+    @include text;
+    color: $lightgrey;
+    font-weight: 400;
+    background-color: $white;
 }
 
 .grid {
@@ -57,106 +67,241 @@ a   {
             }
         }
 
-        &-nav {
-            position: sticky;
-            padding-top: 2vh;
-            padding-bottom: 2vh; 
-            text-align: center;
         
-            .main-nav:hover {
-                background-color: $dustyblue;
-                transition: 0.4s ease;
-            }
-
-                ul li{
-                display: block;
-                padding: 0;
-                }
-                    .nav-list-links {
-                        padding: 1em;
-                        border-radius: 0.25rem;
-                    }                      
-                    .nav-list-links:hover {
-                        color: $bone;
-                        transition: 0.4s;
-                    }
-                    .nav-list-links:active {
-                        color: $white;
-                        opacity: 0.85;
-                    }
-
-                .dropdown {
-                    display: block;
-                    
-                    .dropdown-content {
-                        display: none;
-                        position: relative;
-                        z-index: 1;
-                        padding: 1em;
-                        color: $text;
-                        width: fit-content;
-                        height: fit-content;
-                    }   
-                }
-                .dropdown:hover .dropdown-content {
-                    display: block;
-                    margin: -14px 0 0 0;
-                    transition: all 200ms ;
-                    border-radius: 0.25rem; 
-                    top: 32px;
-                    z-index: 1;
-                    width: auto;
-                    padding: 1.2em;
-                }
-                    .dropdown-list {
-                        min-width: 160px;
-                        padding: 0;    
-                    }
-
-                    .nav-list-links.dropdown {
-                        height: 3.6em;
-                        width: 150px;
-                        display: block;
-                    }
-            }
     }
 }
-        
 
-    .primary-content {
-        max-width: 1000px;
-        margin: 1.2em auto;
-        height: 40vh;
-        text-align: center;
-        text-indent: 2em;
+.main-nav {
+    position: sticky;
+    padding-top: 2vh;
+    padding-bottom: 2vh; 
+    text-align: center;
 
+    .main-nav:hover {
+        background-color: $dustyblue;
+        transition: 0.4s ease;
     }
-
-    .secondary-content {
-        padding: 2em 2em 4em;
+    .main-nav-ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
         text-align: center;
-        height: auto;
+        padding: 0;
+    }
         
-        .figure {
-            height: auto;
+        .nav-list-links {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+        }
 
-                h3 {
-                    font-size: x-large;
-                }
+        ul li{
+        display: block;
+        padding: 0;
+        }
+            .nav-list-links {
+                padding: 1em;
+                border-radius: 0.25rem;
+            }                      
+            .nav-list-links:hover {
+                color: $bone;
+                transition: 0.4s;
+            }
+            .nav-list-links:active {
+                color: $white;
+                opacity: 0.85;
+            }
 
-                p {
-                    color: $brown;
-                    background-color: $green;
-                    padding: 0.25rem;
-                }
+        .dropdown {
+            display: block;
+            
+            .dropdown-content {
+                display: none;
+                position: relative;
+                z-index: 1;
+                padding: 1em;
+                color: $text;
+                width: fit-content;
+                height: fit-content;
+            }   
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            margin: -14px 0 0 0;
+            transition: all 200ms ;
+            border-radius: 0.25rem; 
+            top: 32px;
+            z-index: 1;
+            width: auto;
+            padding: 1.2em;
+        }
+            .dropdown-list {
+                min-width: 160px;
+                padding: 0;    
+            }
+
+            .nav-list-links.dropdown {
+                height: 3.6em;
+                width: 150px;
+                display: block;
             }
     }
 
-    footer {
-        @include background;
-        background-color: $footer;
+.primary-content {
+    max-width: 1000px;
+    margin: 1.2em auto;
+    height: 40vh;
+    text-align: center;
+    text-indent: 2em;
+}
+
+.secondary-content {
+    padding: 2em 2em 4em;
+    text-align: center;
+    
+    .figure {
+        height: auto;
+
+            h3 {
+                font-size: x-large;
+            }
+
+            p {
+                color: $white;
+                background-color: $green;
+                padding: 0.25rem;
+                margin: 0.45rem 0;
+                font-size: 1em;
+            }
+        }
+}
+
+footer {
+    @include background;
+    background-color: $footer;
+    height: 30vh;
+    text-align: center;
+    display: block;
+    padding-top: 10vh;
+}
+
+// contact page --------------------------- 
+.contact-page{
+
+    .contact-form {
+        max-width: 450px;
+        margin: 2em auto;
+        border-radius: 0.65rem;
+        background-color: $bgcolor-5;
+        padding: 20px;
+            
+        
+        input[type=text],
+        input[type=email],
+        select, 
+        textarea    {
+            width: 100%;
+            padding: 12px;
+            border: 0.20rem solid $second-col;
+            border-radius: 6px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            outline: none;
+        }
+        input[type=submit] {
+            background-color: $green;
+            color: $bone;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+        }
+        input[type=submit]:hover {
+            background-color: $dustyblue;
+        }
+    }
+
+    .footer-form {
+        background-color: $second-col;
         height: 30vh;
         text-align: center;
-        display: block;
-        padding-top: 10vh;
+        padding: 2em;
     }
+}
+
+// gallery page ------------
+
+.gallery-page {
+
+    .gallery-container {
+        max-width: 1100px;
+        margin: 2em auto;
+        border-radius: 0.25rem;
+        background-color: $bgcolor-2;
+        padding: 0.8em; 
+
+        .img {
+            height: 100%;
+            max-width: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+            .img0 {
+                grid-column: 1 / 3;
+                grid-row: 1 / 3;
+            }
+            .img1 {
+                grid-column: 3 / 4;
+            }
+            .img4 {
+                width: auto;
+                grid-column: 4 / 5;
+                grid-row: 2 / 4;
+            }
+            .img5 {
+                grid-row: 3 / 5;
+            }
+            .img7 {
+                grid-column: auto;
+            }
+            .img8 {
+                grid-column: 2 / 4;
+                grid-row: 3 / 4; 
+                width: 100%;
+                object-position: center; 
+            }
+            .img13 {
+                grid-row: 6 / 8;
+            }
+            .img14 {
+                grid-column: 2 / 4; 
+                grid-row: 5 / 9;
+            }
+            .img18 {
+                grid-column: 1 / 3;
+            }
+            .img25 {
+                grid-column: 2 / 5;
+            }
+            .img26 {
+                grid-column: 1 / 3;
+            }
+            .img27 {
+                grid-column: 3 / 5;
+            }
+
+            .img29 {
+                grid-column: 1 / 3;
+            }
+            .img30 {
+                grid-column: 3 / 5;
+            }
+    }
+    
+}
+
+

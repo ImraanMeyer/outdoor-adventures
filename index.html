@@ -8,190 +8,217 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="grid">
+    <!-- header starts ---------------->
     <header class="main-header">
         <!-- navbar starts here -->
-            <nav class="main-nav">
-                    <ul class="main-nav-ul">
-                        <li class="nav-list-links one">
-                            <!-- ul links icons -->
-                            <a href="index.html"> Home  </a>
-                        </li>
-                        
-                        <li class="nav-list-links dropdown">
-                            <a href="#cat"> Catergories</a>
-                            <ul class="dropdown-content">
-                                    <li class="dropdown-list-item">
-                                        <a href="#camping-link">Camping</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-list-item">
-                                        <a href="#canoeing-link">Canoeing</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-list-item">
-                                        <a href="#climbing-link">Climbing</a>
-                                    </li>
+        <nav class="main-nav">
+            <ul class="main-nav-ul">
+                <li class="nav-list-links one">
+                    <!-- ul links icons -->
+                    <a href="index.html"> Home  </a>
+                </li>
+                
+                <li class="nav-list-links dropdown">
+                    <a href="#activties"> Catergories</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-list-item">
+                                <a href="#camping-link">Camping</a>
+                            </li>
 
-                                    <li class="dropdown-list-item">
-                                        <a href="#fishing-link">Fishing</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-list-item">
-                                        <a href="#hunting-link">Hunting</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-list-item">
-                                        <a href="#hiking-link">Hiking</a>
-                                    </li>
-                                </ul>
-                        </li>
+                            <li class="dropdown-list-item">
+                                <a href="#canoeing-link">Canoeing</a>
+                            </li>
+                            
+                            <li class="dropdown-list-item">
+                                <a href="#climbing-link">Climbing</a>
+                            </li>
+
+                            <li class="dropdown-list-item">
+                                <a href="#fishing-link">Fishing</a>
+                            </li>
+                            
+                            <li class="dropdown-list-item">
+                                <a href="#hunting-link">Hunting</a>
+                            </li>
+                            
+                            <li class="dropdown-list-item">
+                                <a href="#hiking-link">Hiking</a>
+                            </li>
+                        </ul>
+                </li>
+
+                <li class="nav-list-links three">
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li class="nav-list-links four">
+                    <a href="contact.html"> Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- navbar ends here ---->
         
-                        <li class="nav-list-links three">
-                            <a href="gallery.html">Gallery</a>
-                        </li>
-        
-                        <li class="nav-list-links four">
-                            <a href="contact.html"> Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            <!-- navbar ends here ---->
-        
+        <!-- sub title followed by main title -->
         <p class="sub">The Great Outdoors</p>
         <h1 class="title">Cape Town, South Africa</h1>
 
+        <!-- animated down link / scroll down -->
         <a href="#primary-link">
-            <div class="arrow">
+            <div class="down-arrow">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </a>
     </header>
+    <!-- header ends here  ------------------>
 
-    
+    <!-- primary content starts here ------------------->
     <section class="primary-content" id="primary-link">
         <h2>Looking for something new?</h2>
         <p>
             When the chaos of city life gets too much, escape into the wild and stay the night, there are so many beautiful hiking trails in the Western Cape that it's hard to find a place to start.
         </p>
     </section>
+    <!-- primary cont. ends here ----->
 
-    <section class="secondary-content">
+    <!-- secondary content starts here --------------->
+    <section class="secondary-content" id="activties">
         <h2>Get Your Fix</h2>
 
+        <!-- main layout class for figures -->
         <article class="activty-grid">
+            <!-- CAMPING FIGURE START--------------- -->
             <section class="figure figure1" id="camping-link">
-                <h3>Camping</h3>
+                <h3 class="card-title">Camping</h3 class="card-title">
                 <img src="images/camp.jpg" alt="Camping" class="grid-imgs">
-                <p>Lorem ipsum dolor sit amet </p>
+                
+                <p class="card-text" >
+                    Being outdoors, one with mother nature is truly something you have to aclompish at least once in your life!
+                </p>
 
                 <div class="card-bottom-grid">
+                    <a href="https://www.getaway.co.za/travel-ideas/places-to-stay/camping-western-cape-campsites/" target="blank" class="btn btn1">
+                        Read more
+                    </a>
 
-                        <a href="#" class="btn btn1">
-                            Read more
-                        </a>
-
-                        <a href="contact.html" class="btn btn2">
-                            Enquire
-                        </a>
+                    <a href="contact.html" class="btn btn2">
+                        Enquire
+                    </a>
                 </div>
             </section>
-            
+            <!-- FIGURE END ------>
+
+            <!-- CANOEING FIGURE STARTS ---------------->
             <section class="figure figure2" id="canoeing-link">
-                <h3>Canoeing</h3>
+                <h3 class="card-title">Canoeing</h3 class="card-title">
                 
                 <img class="grid-imgs" src="images/canoe.jpg" alt="Canoeing">
 
-                <p>consectetur, adipisicing elit. Obcaecati, nam.</p>
-                <div class="card-bottom-grid">
+                <p class="card-text">To get a new perspective on the beauty of Cape Town, embark on a kayaking sea trip!</p>
 
-                        <a href="#" class="btn btn1">
-                            Read more
-                        </a>
+                <div class="card-bottom-grid" >
+                    <a href="https://kayak.co.za/" target="blank" class="btn btn1">
+                        Read more
+                    </a>
 
-                        <a href="contact.html" class="btn btn2">
-                            Enquire
-                        </a>
+                    <a href="contact.html" class="btn btn2">
+                        Enquire
+                    </a>
                 </div>
             </section>
-            
+            <!-- FIGURE ENDS -->
+
+            <!-- CLIMBING FIGURE STARTS ------------------->
             <section class="figure figure3" id="climbing-link">
-                <h3>Climbing</h3>
+                <h3 class="card-title">Climbing</h3 class="card-title">
 
                 <img src="images/climbing.jpg" alt="Climbing" class="grid-imgs">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ex?</p>
+                <p class="card-text">The Cape region of South Africa boasts some of the best rock climbing, highly regarded among international climbers.</p>
 
                 <div class="card-bottom-grid">
+                    <a href="http://www.climbing.co.za/" target="blank" class="btn btn1">
+                        Read more
+                    </a>
 
-                        <a href="#" class="btn btn1">
-                            Read more
-                        </a>
-
-                        <a href="contact.html" class="btn btn2">
-                            Enquire
-                        </a>
+                    <a href="contact.html" class="btn btn2">
+                        Enquire
+                    </a>
                 </div>
             </section>
+            <!-- FIGURE ENDS -->
 
+            <!-- FISHING FIGURE STARTS ---------------------->
             <section class="figure figure4" id="fishing-link">
-                <h3>Fishing</h3>
+                <h3 class="card-title">Fishing</h3 class="card-title">
                 
                 <img src="images/fishing.jpg" alt="Fishing" class="grid-imgs">
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, consequatur.</p>
+                <p class="card-text">With over 40 million people fishing each year, it can be a great way to spend time outside with family and friends.</p>
                 <div class="card-bottom-grid">
+                    <a href="https://showme.co.za/cape-town/tourism/best-recreational-fishing-spots-in-and-around-cape-town/"   target="blank" class="btn btn1">
+                        Read more
+                    </a>
 
-                        <a href="#" class="btn btn1">
-                            Read more
-                        </a>
-
-                        <a href="contact.html" class="btn btn2">
-                            Enquire
-                        </a>
+                    <a href="contact.html" class="btn btn2">
+                        Enquire
+                    </a>
                 </div>
             </section>
+            <!-- FIGURE ENDS -->
             
+            <!-- HUNTING FIGURE STARTS --------------------->
             <section class="figure figure5" id="hunting-link">
-                <h3>Hunting</h3>
+                <h3 class="card-title">Hunting</h3 class="card-title">
                 <img class="grid-imgs" src="images/hunt.jpg" alt="Hunting">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, sint!</p>
+                <p class="card-text">Cape Town hunting safaris and tours, for personal and specialised tours in South Africa</p>
                 <div class="card-bottom-grid">
+                    <a href="http://www.capetownhuntingsafaris.co.za/" target="blank" class="btn btn1">
+                        Read more
+                    </a>
 
-                        <a href="#" class="btn btn1">
-                            Read more
-                        </a>
-
-                        <a href="contact.html" class="btn btn2">
-                            Enquire
-                        </a>
+                    <a href="contact.html" class="btn btn2">
+                        Enquire
+                    </a>
                 </div>
             </section>
+            <!-- FIGURE ENDS -->
             
+            <!-- HIKING FIGURE STARTS ------------------>
             <section class="figure figure6" id="hiking-link">
-                <h3>Hiking</h3>
+                <h3 class="card-title">Hiking</h3 class="card-title">
                 <img src="images/hike.jpg" alt="Hiking" class="grid-imgs">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quae!</p>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, iusto!</p>
+                <p class="card-text">Enjoy a scenic walk along Cape Town's mountains and improve your blood pressure and blood sugar levels.</p>
                 <div class="card-bottom-grid">
+                    <a href="https://insideguide.co.za/cape-town/hiking-trails/" target="blank" class="btn btn1">
+                        Read more
+                    </a>
 
-                        <a href="#" class="btn btn1">
-                            Read more
-                        </a>
-
-                        <a href="contact.html" class="btn btn2">
-                            Enquire
-                        </a>
+                    <a href="contact.html" class="btn btn2">
+                        Enquire
+                    </a>
                 </div>
             </section>
+            <!-- FIGURE ENDS -->
         </article>
+        <!-- figures grid ends here -->
     </section>
+    <!-- secondary content ends here -->
 
-    <footer class="main-footwer">
-        <p>Designed by ImraanMeyer</p>
+    <!-- footer starts here -->
+    <footer class="main-footer">
+        <a href="#primary-link">
+            <div class="up-arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+
+        <p>Copyright © ImraanMeyer</p>
         <p>Junior Web Developer</p>
         <p>2019</p>
     </footer>
+    <!-- footer end -->
 </body>
 </html>

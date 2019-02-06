@@ -5,8 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Page | Outdoor Adventures</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
-<body>
+<body class="contact-page">
+    <!-- nav starts here -->
+    <nav class="main-nav">
+            <ul class="main-nav-ul">
+                <li class="nav-list-links one">
+                    <!-- ul links icons -->
+                    <a href="index.html"> Home  </a>
+                </li>
+                
+                <li class="nav-list-links dropdown">
+                    <a href="#activties"> Catergories</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-list-item">
+                                <a href="index.html#camping-link">Camping</a>
+                            </li>
+
+                            <li class="dropdown-list-item">
+                                <a href="index.html#canoeing-link">Canoeing</a>
+                            </li>
+                            
+                            <li class="dropdown-list-item">
+                                <a href="index.html#climbing-link">Climbing</a>
+                            </li>
+
+                            <li class="dropdown-list-item">
+                                <a href="index.html#fishing-link">Fishing</a>
+                            </li>
+                            
+                            <li class="dropdown-list-item">
+                                <a href="index.html#hunting-link">Hunting</a>
+                            </li>
+                            
+                            <li class="dropdown-list-item">
+                                <a href="#hiking-link">Hiking</a>
+                            </li>
+                        </ul>
+                </li>
+
+                <li class="nav-list-links three">
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li class="nav-list-links four">
+                    <a href="contact.html"> Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- nav end -->
     
+    <h1 class="form-title">We love to hear form You!</h1>
+
+        <form class="contact-form">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="Your email address..">
+        
+            <label for="activty">Activties</label>
+            <select id="activty" name="activty">
+                <option value="hiking">Hiking</option>
+                <option value="canoeing">Canoeing</option>
+                <option value="hunting">Hunting</option>
+                <option value="climbing">Climbing</option>
+                <option value="fishing">Fishing</option>
+                <option value="camping">Camping</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+        
+            <input type="submit" value="Submit">
+        </form>
+
+        <section class="footer-form">
+            <a href="#">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <p>Copyright © ImraanMeyer</p>  
+        </section>
 </body>
 </html>
