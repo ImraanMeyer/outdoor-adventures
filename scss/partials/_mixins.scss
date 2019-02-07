@@ -4,7 +4,16 @@
     font-weight: 300;
 }
 
+
 @mixin background {
+    background-image: linear-gradient($bgcolor-2, $bgcolor-1),  url(../images/cliff-crop.jpg);
+    background-blend-mode: multiply;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin bgfooter {
     background-image: linear-gradient($bgcolor-2, $bgcolor-1),  url(../images/cliff-crop.jpg);
     background-blend-mode: multiply;
     background-position: bottom;

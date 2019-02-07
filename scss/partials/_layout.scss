@@ -1,7 +1,7 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:  auto 100vh 40vh auto 30vh;
+    grid-template-rows:  auto 100vh 40vh auto 10vh;
     grid-template-areas: 
         "nav nav nav"
         "header header header"
@@ -93,12 +93,57 @@
 
 .main-footer {
     grid-area: footer;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "left middle right";
+
+        .left-text {
+            grid-area: left;
+        }
+        .middle {
+            grid-area: middle;
+        }
+        .right-up {
+            grid-area: right;
+        }
 }
 
-// galler page ------------------------------------ //
+// gallery page ------------------------------------ //
 .gallery-container  {
     display: grid;
     grid-gap: 0.45rem;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(auto, 200px);  
+}
+
+//   page 
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto, auto);
+    grid-template-areas: 
+        "name sname"
+        "email email"
+        "activty activty"
+        "txt txt" ;
+
+        .name {
+            grid-area: name;
+            display: inline-grid;
+        }
+        .sname {
+            grid-area: sname;
+            display: inline-grid;
+        }
+        .email {
+            grid-area: email;
+        }
+        .activty {
+            grid-area: activty;
+        }
+        
 }
