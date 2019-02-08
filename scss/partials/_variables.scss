@@ -25,88 +25,16 @@ $footer         :#725752a4;
 $formbg-1       :#455d80;
 $bgfooter       :#ffffff27;
 
-
-
 // main colors
 $primary-col    : $brown;
 $second-col     : $grey;
 
 // h1,h2,h3, p tags
 $headings       : $bone;
-$text           : $lemon-brown;
+$text           : $white;
 
-.grid {
-    background: $primary-col;
-}
-.contact-page {
-    @include background;
-    background-blend-mode: color-burn;
-}
-
-h1, 
-h2 {
-    color: $headings;
-}
-h2::after {
-    background-color: $headings;
-    @include underline;
-    text-align: left;
-}
-
-.form-title {
-    padding: 20px 0 0 0;
-    color: $headings;
-    margin: 0 auto;
-    max-width: 500px;
-}
-.form-title::after {
-    background: $headings;
-    @include underline;
-}
-
-h3::after {
-    @include underline;
-    background-color: $second-col;
-}
-
-h3 {
-    color: $brown;
-    padding: 0.8em;
-}
-
-p {
-    color: $text;
-}
-
-.sub {
-    color: $bone;
-}
-
-.main-nav {
-    background: $bgnav-1;
-}
-.main-nav:hover {
-    background: $bgnav-2;
-}
-
-
-.dropdown-content {
-    background: $second-col !important;
-}
-
-
-.primary-content {
-    background: $primary-col;
-}
-
-.secondary-content {
-    background: $second-col;
-}
-
-.figure {
-    background-color: $headings;
-    border-top: $primary-col 1em solid;
-}
 
 // breakpoints -------
-$breakpoint-mobile : "only screen and (min-width: 600px)";
+$breakpoint-moblie      : 600px;
+$breakpoint-tablet      : 768px;
+$breakpoint-bigscreen   : 2000px;
