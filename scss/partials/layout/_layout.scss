@@ -1,0 +1,85 @@
+@import 'navbar.scss',
+        'index.scss',
+        'gallery.scss',
+        'contact.scss',
+        'footer.scss';
+
+
+
+
+
+
+
+
+
+// .grid {
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     grid-template-rows:  auto 100vh 40vh auto 10vh;
+//     grid-template-areas: 
+//         "nav"
+//         "header"
+//         "primary"
+//         "secondary"
+//         "footer";
+
+//     .main-header {
+//         grid-area: header;
+//     }
+    
+//     .main-nav {
+//         grid-area: nav;
+//         ul {
+//         float: left !important;
+//         }     
+//     }   
+
+//     .main-nav-ul {
+//         margin: 0 auto;
+//     }
+
+    
+//     .primary-content {
+//         grid-area: primary;
+//             h2 {
+//                 margin-top: 0;
+//             }
+//     }
+    
+//     .secondary-content {
+//         grid-area: secondary;
+    
+//         .activty {
+//             max-width: 1200px;
+//             grid-gap: 2em;
+//             margin: 0 auto;
+    
+//             display: grid;
+//             grid-template-columns: repeat(3, 1fr);
+//             grid-template-rows: auto;
+                
+//             .row1 {
+//                 margin: 0 auto 2em;
+//                 display: grid;
+//                 grid-template-columns: 1fr;
+//                 grid-template-rows: repeat(3, 1fr);
+//                 grid-template-areas: 
+//                     "fig1"
+//                     "fig2"
+//                     "fig3";
+//             }
+
+//             .row2 {
+//                 display: grid;
+//                 grid-template-columns: 1fr;
+//                 grid-template-rows: repeat(3, 1fr);
+//                 grid-template-areas: 
+//                     "fig4"
+//                     "fig5"
+//                     "fig6";
+//             }
+
+            
+//         }
+//     }
+// }

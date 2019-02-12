@@ -8,29 +8,62 @@
     transition: 0.4s ease-in-out;
 }
 
+.grid {
+    background: $primary-col;
+}
+.contact-page {
+    @include background;
+    background-blend-mode: color-burn;
+}
+.gallery-page {
+    @include background;
+    background-attachment: fixed;
+}
+
 body, * {
     margin: 0;
     box-sizing: border-box;
 }
 
+// global font and color for headings
 h1,
 h2,
 h3 {
     font-family: 'Merriweather', serif;
     font-weight: 400;
     text-align: center;
+    color: $headings;
 }
 
-h2 {
-    margin: 1.6em 10em;
-}
-
+// global font family for p and a tags, color
 p, 
 a {
     @include text;
     color: $white;
 }
 
+// global h2 margins and underline ::after 
+h2 {
+    margin: 0 auto 1.6em;
+}
+h2::after {
+    background-color: $headings;
+    @include underline;
+    text-align: left;
+}
+
+// global h3 margins and underline
+h3 {
+    color: $brown !important;
+    padding: 0.8em;
+}
+h3::after {
+    @include underline;
+    background-color: $second-col;
+}
+
+
+// FORM STYLES START
 option[value],
 option,
 .form,
@@ -45,128 +78,73 @@ input[type=submit] {
 }
 
 option[value] {
-    background-color: $brown;
+    background-color: $primary-col;
 }
+// FORM STYLES END
+
 
 .grid {
     .main {
         &-header {
-            height: 100vh;
             text-align: center;
             @include background;
+            height: 100vh;
             
+                // sub title for header
                 .sub {
+                    color: $bone;
                     font-size: 2vw;
                     padding: 18vh 0 0 0;
-                    align-items: center;
-                    margin: 0 300px 0 300px;
+                    text-align: center;
+                    margin: 0 auto;
+                    max-width: 300px;
                     line-height: 3.4em;
                 }
+                // underline code for heading specfic
                 .sub::after {
                     content: "";
                     display: block;
                     border-bottom: solid $bone 2.8px;
                 }
+                // title for header
                 .title {
-                    font-size: 6vw;
-                    margin: 0 100px 0 100px; 
-            }
+                    font-size: 6vw; 
+                }   
         }
 
         
     }
 }
 
-.main-nav {
-    position: sticky;
-    padding-top: 0.5vh;
-    padding-bottom: 0.5vh; 
-    text-align: center;
 
-    .main-nav:hover {
-        background-color: $dustyblue;
-        transition: 0.4s ease;
-    }
-    .main-nav-ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: right;
-        text-align: center;
-        padding: 0;
-    }
-
-        ul li{
-        display: block;
-        padding: 0;
-        }
-            .nav-list-links {
-                padding: 1em;
-                margin: 0 0.6em;
-                border-radius: 0.25rem;
-            }
-
-        .dropdown {
-            display: block;
-            
-            .dropdown-content {
-                display: none;
-                position: relative;
-                z-index: 1;
-                padding: 1em;
-                color: $text;
-                width: fit-content;
-                height: fit-content;
-            }   
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-            margin: -14px 0 0 0;
-            transition: all 200ms ;
-            border-radius: 0.1rem; 
-            top: 33.5px;
-            z-index: 1;
-            width: auto;
-            padding: 1.2em;
-        }
-            .dropdown-list {
-                min-width: 160px;
-                padding: 0;    
-            }
-
-            .nav-list-links.dropdown {
-                height: 3.6em;
-                width: 150px;
-                display: block;
-            }
-    }
-
+// first text section brown bg 
 .primary-content {
-    max-width: 1000px;
+    padding: 0 6em;
     margin: 1.2em auto;
-    height: 40vh;
     text-align: center;
     text-indent: 2em;
+    max-width: 70vw;
 }
 
 .secondary-content {
+    background: $second-col;
     padding: 2em 2em 4em;
     text-align: center;
     
-    .figure {
-        height: auto;
-
+    
+    .figure {    
+        background-color: $headings;
+        border-top: $primary-col 1em solid;
             h3 {
                 font-size: x-large;
             }
-
-            p {
-                color: $white;
-                background-color: $green;
-                padding: 0.25rem;
-                margin: 0.45rem 0;
-                font-size: 1em;
-            }
+                p {
+                    color: $white;
+                    background-color: $green;
+                    padding: 0.25rem;
+                    margin: 0.45rem 0;
+                    font-size: 1em;
+                }
         }
 }
 
@@ -177,31 +155,33 @@ option[value] {
     display: block;
     padding: 2vh;
     contain: content;
-
         .left-text {
-            text-align: left;
-        }
-        .middle {
-            text-align: center
-        }
-        .right-up {
-            justify-self: right;
+            p {
+                font-size: 0.8em;
+                margin-top: 1.4vh;
+            }
         }
 }
+
 
 // contact page --------------------------- 
 .contact-page{
         @include background;
+        .form-title {
+            color: $headings;
+            margin: 1.4em auto;
+            max-width: 500px;
+        }
+        .form-title::after {
+            background: $headings;
+            @include underline;
+        }
     .form {
-        margin: 2em 70px 2em 500px;
-        border-radius: 0.65rem;
         background-color: #fff0;
-        padding: 20px;
-
         .form-grid {
             
             input[type=text] {
-                width: 98% !important;
+                padding: 0.6em;
             }
             input[type=text],
             input[type=email],
@@ -209,14 +189,15 @@ option[value] {
             textarea    {
                 width: 100%;
                 padding: 12px;
-                border: 0.20rem solid $bgcolor-3;
-                border-radius: 6px;
+                border: 1px solid $bgcolor-3;
                 margin-top: 6px;
                 margin-bottom: 16px;
                 resize: vertical;
                 outline: none;
             }
-            
+            textarea {
+                height: 152px;
+            }
         } 
     
         input[type=submit] {
@@ -225,9 +206,9 @@ option[value] {
             color: $lemon-brown;
             padding: 1.4em;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
             outline: none;
+            border: 1px solid $bgcolor-3;
         }
         input[type=submit]:hover {
             background-color: $brown;
@@ -238,87 +219,87 @@ option[value] {
 }
 
 // gallery page ------------
+.gallery-container {
+    // max-width: 1000px;
+    margin: 2em auto;
+    border-radius: 0.25rem;
+    padding: 0.8em; 
 
-.gallery-page {
-    @include background;
-    background-attachment: fixed;
-
-
-    .gallery-container {
-        max-width: 1000px;
-        margin: 2em auto;
-        border-radius: 0.25rem;
-        padding: 0.8em; 
-
-        .img {
-            height: 100%;
-            max-width: 100%;
-            width: auto;
-            object-fit: cover;
-            opacity: 0.96;
-            border-radius: 0.15rem;
-        }
-
-        .img:hover {
-            @include opacity-reveal;
-            background-color: none;
-        }
-            .img0 {
-                grid-column: 1 / 3;
-                grid-row: 1 / 3;
-            }
-            .img1 {
-                grid-column: 3 / 4;
-            }
-            .img4 {
-                width: auto;
-                grid-column: 4 / 5;
-                grid-row: 2 / 4;
-            }
-            .img5 {
-                grid-row: 3 / 5;
-            }
-            .img7 {
-                grid-column: auto;
-            }
-            .img8 {
-                grid-column: 2 / 4;
-                grid-row: 3 / 4; 
-                width: 100%;
-                object-position: center; 
-            }
-            .img13 {
-                grid-row: 6 / 8;
-            }
-            .img14 {
-                grid-column: 2 / 4; 
-                grid-row: 5 / 9;
-            }
-            .img18 {
-                grid-column: 1 / 3;
-            }
-            .img25 {
-                grid-column: 2 / 5;
-            }
-            .img26 {
-                grid-column: 1 / 3;
-            }
-            .img27 {
-                grid-column: 3 / 5;
-            }
-
-            .img29 {
-                grid-column: 1 / 3;
-            }
-            .img30 {
-                grid-column: 3 / 5;
-            }
-            .img31 {
-                object-fit: cover;
-                object-position: left !important;
-            }
+    .img {
+        height: 100%;
+        max-width: 100%;
+        width: auto;
+        object-fit: cover;
+        opacity: 0.96;
+        border-radius: 0.15rem;
     }
-    
+
+    .img:hover {
+        @include opacity-reveal;
+        background-color: none;
+    }
+
+        // .img:nth-of-type(2n) {
+        //     grid-column: 1 / 3;
+        // }
+        // .img:nth-of-type(2n) {
+        //     grid-column: 2 / 5;
+        // }
+        
+
+
+        .img0 {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+        .img1 {
+            grid-column: 3 / 4;
+        }
+        .img4 {
+            width: auto;
+            grid-column: 4 / 5;
+            grid-row: 2 / 4;
+        }
+        .img5 {
+            grid-row: 3 / 5;
+        }
+        .img7 {
+            grid-column: auto;
+        }
+        .img8 {
+            grid-column: 2 / 4;
+            grid-row: 3 / 4; 
+            width: 100%;
+            object-position: center; 
+        }
+        .img13 {
+            grid-row: 6 / 8;
+        }
+        .img14 {
+            grid-column: 2 / 4; 
+            grid-row: 5 / 9;
+        }
+        .img18 {
+            grid-column: 1 / 3;
+        }
+        .img25 {
+            grid-column: 2 / 5;
+        }
+        .img26 {
+            grid-column: 1 / 3;
+        }
+        .img27 {
+            grid-column: 3 / 5;
+        }
+
+        .img29 {
+            grid-column: 1 / 3;
+        }
+        .img30 {
+            grid-column: 3 / 5;
+        }
+        .img31 {
+            object-fit: cover;
+            object-position: left !important;
+        }
 }
-
-

@@ -1,0 +1,57 @@
+@media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    .form-grid {
+        display: grid;
+        margin: 0 2em;
+        grid-template-columns:1fr 1em 1fr;
+        grid-template-rows: repeat(auto, auto);
+        grid-template-areas: 
+            "name . sname"
+            "email email email"
+            "activty activty activty"
+            "txt txt txt"
+            "btn btn btn";
+    
+            .name {
+                grid-area: name;
+            }
+            .sname {
+                grid-area: sname;
+            }
+            .email {
+                grid-area: email;
+            }
+            .activty-select {
+                grid-area: activty;
+            }
+            .text-area {
+                grid-area: txt;
+            }
+            .sbt-btn {
+                grid-area: btn;
+            }
+    
+    }
+}
+
+@media only screen 
+    and (min-device-width: 320px)
+    and (max-device-width: 1000px)
+    and (-webkit-min-device-pixel-ratio: 2) { 
+        .contact-page {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto 1fr 10vh;
+            grid-template-areas: 
+                "nav"
+                "title"
+                "form"
+                "footer";
+            .form {
+                margin: 0 1.6em 2em;
+            }
+    }
+}

@@ -1,0 +1,7 @@
+// gallery page ------------------------------------ //
+.gallery-container  {
+    display: grid;
+    grid-gap: 0.45rem;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(auto, 200px);  
+}

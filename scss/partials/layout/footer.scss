@@ -1,0 +1,24 @@
+// global footer
+.main-footer {
+    grid-area: footer;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "left middle right";
+
+        .left-text {
+            grid-area: left;
+            text-align: left;
+
+        }
+        .middle {
+            grid-area: middle;
+            text-align: center;
+        }
+        .right-up {
+            grid-area: right;
+            justify-self: right;
+        }
+}

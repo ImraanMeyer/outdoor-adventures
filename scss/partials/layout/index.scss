@@ -1,0 +1,43 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  auto 100vh auto auto 10vh;
+    grid-template-areas: 
+        "nav"
+        "header"
+        "primary"
+        "secondary"
+        "footer";
+}
+
+.main-header {
+    grid-area: header;
+}
+.main-nav {
+    grid-area: nav;
+}
+.primary-content {
+    grid-area: primary;
+}
+.secondary-content {
+    grid-area: secondary;
+            
+    .figure1 {
+        grid-area: fig1;
+    }
+    .figure2 {
+        grid-area: fig2;
+    }
+    .figure3 {
+        grid-area: fig3;
+    }
+    .figure4 {
+        grid-area: fig4;
+    }
+    .figure5 {
+        grid-area: fig5;
+    }
+    .figure6 {
+        grid-area: fig6;
+    }
+}

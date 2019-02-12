@@ -1,0 +1,25 @@
+.contact-page {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto 1fr 10vh;
+    grid-template-areas: 
+        "nav nav"
+        "title title"
+        "blank form"
+        "footer footer";
+
+        .main-nav {
+            grid-area: nav;
+        }
+        .form-title {
+            grid-area: title;
+        }
+        .main-footer {
+            grid-area: footer;
+        }
+        .form {
+            grid-area: form;
+            margin-bottom: 2em; 
+        }
+           
+}

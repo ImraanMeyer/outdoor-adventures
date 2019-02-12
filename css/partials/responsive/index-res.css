@@ -1,0 +1,54 @@
+@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .activty {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    max-width: 1200px;
+    grid-gap: 2em;
+    margin: 2em auto; }
+
+  .row1 {
+    grid-template-areas: "fig1 fig2 fig3"; }
+
+  .row2 {
+    grid-template-areas: "fig4 fig5 fig6"; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) {
+  .secondary-content {
+    display: grid;
+    grid-template-columns: 2fr 2em 2fr;
+    grid-template-rows: 10vh 1fr;
+    grid-template-areas: "title title title" "row1 . row2"; }
+
+  #section-title {
+    grid-area: title; }
+
+  .row1 {
+    grid-area: row1; }
+
+  .row2 {
+    grid-area: row2; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
+  .primary-content h2 {
+    max-width: 60vh; }
+
+  .secondary-content h2 {
+    padding: 1.2em 0;
+    margin: 0 auto; }
+
+  .primary-content,
+  .secondary-content {
+    padding: 0; }
+
+  .activty {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; }
+
+  .row1 {
+    grid-template-areas: "fig1" "fig2" "fig3"; }
+
+  .row2 {
+    grid-template-areas: "fig4" "fig5" "fig6"; } }
+
+/*# sourceMappingURL=index-res.css.map */
