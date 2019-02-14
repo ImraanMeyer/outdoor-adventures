@@ -44,12 +44,7 @@ a {
 
 // global h2 margins and underline ::after 
 h2 {
-<<<<<<< HEAD
     margin: 0 auto 1.6em;
-=======
-    margin: 1.6em auto;
-    max-width: 70vw;
->>>>>>> 115f81c413e111d5bf7d1a4bbe6da83bb65770af
 }
 h2::after {
     background-color: $headings;
@@ -67,10 +62,6 @@ h3::after {
     background-color: $second-col;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 115f81c413e111d5bf7d1a4bbe6da83bb65770af
 // FORM STYLES START
 option[value],
 option,
@@ -124,78 +115,6 @@ option[value] {
     }
 }
 
-<<<<<<< HEAD
-=======
-// global nav bar
-
-.main-nav {
-    background: $bgnav-1;
-    position: sticky;
-    padding-top: 0.5vh;
-    padding-bottom: 0.5vh; 
-    text-align: center;
-        .main-nav-ul {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            text-align: center;
-            padding: 0;
-            list-style-type: none;
-        }
-        // styling for all ul li
-        ul li{
-        padding: 0 0 0.4em 0;
-        list-style-type: none;
-        }
-            // li tags withing the navbar
-            .nav-list-links {
-                padding: 1em;
-                margin: 0 0.6em;
-                border-radius: 0.25rem;
-            }
-        // dropdown menu for navbar (which is main nav li)
-        .dropdown {
-            display: block;
-            // dropdown unorederd list
-            .dropdown-content {
-                background: $second-col;
-                color: $text;
-                display: none;
-                position: relative;
-                z-index: 1;
-                padding: 1em;
-            }   
-        }
-        // displays once you hover over dropdown li
-        .dropdown:hover .dropdown-content {
-            display: block;
-            margin: -14px 0 0 0;
-            transition: all 200ms ;
-            border-radius: 0.1rem; 
-            top: 33.5px;
-            z-index: 1;
-            width: auto;
-            padding: 1.2em;
-            text-align: left;
-        }   
-            .nav-list-links.dropdown {
-                height: 3.6em;
-                width: 150px;
-                display: block;
-            }
-            .dropdown-list-item {
-                a:active {
-                    color: $green;
-                }
-            }
-
-            .dropdown-list-item::after {
-                    @include drop-line;
-                    background-color: $primary-col;
-            }
-}
->>>>>>> 115f81c413e111d5bf7d1a4bbe6da83bb65770af
 
 // first text section brown bg 
 .primary-content {
@@ -211,18 +130,10 @@ option[value] {
     padding: 2em 2em 4em;
     text-align: center;
     
-<<<<<<< HEAD
     
     .figure {    
         background-color: $headings;
         border-top: $primary-col 1em solid;
-=======
-    .figure {    
-        background-color: $headings;
-        border-top: $primary-col 1em solid;
-        height: auto;
-        margin: 2em auto;
->>>>>>> 115f81c413e111d5bf7d1a4bbe6da83bb65770af
             h3 {
                 font-size: x-large;
             }
@@ -256,10 +167,6 @@ option[value] {
 .contact-page{
         @include background;
         .form-title {
-<<<<<<< HEAD
-=======
-            // padding: 2em 0 0 0;
->>>>>>> 115f81c413e111d5bf7d1a4bbe6da83bb65770af
             color: $headings;
             margin: 1.4em auto;
             max-width: 500px;
@@ -312,11 +219,7 @@ option[value] {
 
 // gallery page ------------
 .gallery-container {
-<<<<<<< HEAD
     // max-width: 1000px;
-=======
-    max-width: 1000px;
->>>>>>> 115f81c413e111d5bf7d1a4bbe6da83bb65770af
     margin: 2em auto;
     border-radius: 0.25rem;
     padding: 0.8em; 
@@ -329,21 +232,12 @@ option[value] {
         opacity: 0.96;
         border-radius: 0.15rem;
     }
-<<<<<<< HEAD
-
+    
     .img:hover {
         @include opacity-reveal;
         background-color: none;
     }
 
-=======
-
-    .img:hover {
-        @include opacity-reveal;
-        background-color: none;
-    }
-
->>>>>>> 115f81c413e111d5bf7d1a4bbe6da83bb65770af
         // .img:nth-of-type(2n) {
         //     grid-column: 1 / 3;
         // }
