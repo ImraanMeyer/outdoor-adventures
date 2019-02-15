@@ -1,31 +1,3 @@
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 100vh auto auto 10vh;
-  grid-template-areas: "nav" "header" "primary" "secondary" "footer"; }
 
-.main-header {
-  grid-area: header; }
-
-.main-nav {
-  grid-area: nav; }
-
-.primary-content {
-  grid-area: primary; }
-
-.secondary-content {
-  grid-area: secondary; }
-  .secondary-content .figure1 {
-    grid-area: fig1; }
-  .secondary-content .figure2 {
-    grid-area: fig2; }
-  .secondary-content .figure3 {
-    grid-area: fig3; }
-  .secondary-content .figure4 {
-    grid-area: fig4; }
-  .secondary-content .figure5 {
-    grid-area: fig5; }
-  .secondary-content .figure6 {
-    grid-area: fig6; }
 
 /*# sourceMappingURL=index.css.map */

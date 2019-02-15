@@ -2,28 +2,43 @@
   display: inline-block;
   margin: 0 0 1em;
   width: 100%;
-  object-fit: cover;
-  opacity: .90; }
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: .90;
+}
 
 .item:hover {
-  opacity: 1; }
+  opacity: 1;
+}
 
 .img {
   width: auto;
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .gallery-container {
     margin: 0 1em;
-    column-count: 5;
-    column-gap: 1em;
-    background-image: url(../cliff-crop.jpg); } }
+    -webkit-column-count: 5;
+            column-count: 5;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
+    background-image: url(../cliff-crop.jpg);
+  }
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1000px) {
   .gallery-container {
-    column-count: 3; } }
+    -webkit-column-count: 3;
+            column-count: 3;
+  }
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
   .gallery-container {
-    column-count: 1; } }
-
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
 /*# sourceMappingURL=gallery.css.map */

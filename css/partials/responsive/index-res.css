@@ -12,12 +12,13 @@
 
   .row2 {
     grid-template-areas: "fig4 fig5 fig6"; } }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1000px) {
   .secondary-content {
     display: grid;
     grid-template-columns: 2fr 2em 2fr;
-    grid-template-rows: 10vh 1fr;
-    grid-template-areas: "title title title" "row1 . row2"; }
+    grid-template-rows: auto;
+    grid-template-areas: "title title title" "row1 . row2";
+    margin: 2em auto; }
 
   #section-title {
     grid-area: title; }
