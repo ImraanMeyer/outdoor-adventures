@@ -446,7 +446,7 @@ a:active {
     opacity: 0;
     transform: rotate(45deg) translate(10px, 10px); } }
 .fab {
-  font-size: 4vw;
+  font-size: 3vw;
   padding: 0 0.6em 0em 0.6em;
   color: #fef6c9; }
 
