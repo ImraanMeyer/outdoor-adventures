@@ -820,7 +820,7 @@ a:active {
   border-right: 5px solid #eef0f2;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  margin: -40px;
+  margin: -10px;
   -webkit-animation: animate-up 2s infinite;
           animation: animate-up 2s infinite;
 }
@@ -828,16 +828,16 @@ a:active {
 @-webkit-keyframes animate-up {
   0% {
     opacity: 0;
-    -webkit-transform: rotate(45deg) translate(20px, 20px);
-            transform: rotate(45deg) translate(20px, 20px);
+    -webkit-transform: rotate(45deg) translate(10px, 10px);
+            transform: rotate(45deg) translate(10px, 10px);
   }
 }
 
 @keyframes animate-up {
   0% {
     opacity: 0;
-    -webkit-transform: rotate(45deg) translate(20px, 20px);
-            transform: rotate(45deg) translate(20px, 20px);
+    -webkit-transform: rotate(45deg) translate(10px, 10px);
+            transform: rotate(45deg) translate(10px, 10px);
   }
 }
 

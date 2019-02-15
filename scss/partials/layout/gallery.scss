@@ -1,7 +1,23 @@
-// gallery page ------------------------------------ //
-.gallery-container  {
-    display: grid;
-    grid-gap: 0.45rem;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(auto, 200px);  
+.gallery-page {
+    .gallery-container {
+        margin: 0 1em;
+        column-count: 5;
+        column-gap: 1em;
+        background-image: url(../cliff-crop.jpg);
+        .item {
+            display: inline-block;
+            margin: 0 0 1em;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0.96;
+            img {
+                width: auto;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .item:hover {
+            @include opacity-reveal;
+        }
+    }
 }
