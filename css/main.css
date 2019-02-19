@@ -117,12 +117,16 @@ option[value] {
   padding: 2em;
   margin: 1.2em auto;
   text-align: center; }
+  .primary-content p {
+    font-size: 2vw;
+    padding: 1em; }
 
 .secondary-content {
   background: #909190;
   padding: 2em;
   text-align: center; }
   .secondary-content .figure {
+    margin: 0.45rem;
     background-color: #EEE5E9;
     border-top: #725752 1em solid; }
     .secondary-content .figure h3 {

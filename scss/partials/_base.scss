@@ -123,6 +123,10 @@ option[value] {
     padding: 2em;
     margin: 1.2em auto;
     text-align: center;
+        p {
+            font-size: 2vw;
+            padding: 1em;
+        }
 }
 
 .secondary-content {
@@ -132,6 +136,7 @@ option[value] {
     
     
     .figure {    
+        margin: 0.45rem;
         background-color: $platinum;
         border-top: $primary-col 1em solid;
             h3 {
