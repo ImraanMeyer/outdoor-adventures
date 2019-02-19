@@ -23,6 +23,7 @@
 body, * {
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 // global font and color for headings
@@ -39,12 +40,13 @@ h3 {
 p, 
 a {
     @include text;
-    color: $white;
+    color: $platinum;
 }
 
 // global h2 margins and underline ::after 
 h2 {
     margin: 0 auto 1.6em;
+    font-size: 3.2vw;
 }
 h2::after {
     background-color: $headings;
@@ -71,7 +73,7 @@ select[id],
 textarea[placeholder],
 input[type=submit] {
     @include text;
-    color: $lemon-brown;
+    color: $text;
     font-weight: 400;
     background-color: $grey;
 }
@@ -91,7 +93,7 @@ option[value] {
             
                 // sub title for header
                 .sub {
-                    color: $bone;
+                    color: $headings;
                     font-size: 2vw;
                     padding: 18vh 0 0 0;
                     text-align: center;
@@ -103,7 +105,7 @@ option[value] {
                 .sub::after {
                     content: "";
                     display: block;
-                    border-bottom: solid $bone 2.8px;
+                    border-bottom: solid  2.8px;
                 }
                 // title for header
                 .title {
@@ -118,25 +120,25 @@ option[value] {
 
 // first text section brown bg 
 .primary-content {
-    padding: 0 1em;
+    padding: 2em;
     margin: 1.2em auto;
     text-align: center;
 }
 
 .secondary-content {
     background: $second-col;
-    padding: 2em 2em 4em;
+    padding: 2em;
     text-align: center;
     
     
     .figure {    
-        background-color: $headings;
+        background-color: $platinum;
         border-top: $primary-col 1em solid;
             h3 {
                 font-size: x-large;
             }
                 p {
-                    color: $white;
+                    color: $text;
                     background-color: $green;
                     padding: 0.25rem;
                     margin: 0.45rem 0;
@@ -154,7 +156,7 @@ option[value] {
     contain: content;
         .left-text {
             p {
-                font-size: 0.8em;
+                font-size: 1vw;
                 margin-top: 1.4vh;
             }
         }
@@ -184,9 +186,10 @@ option[value] {
             input[type=email],
             select, 
             textarea    {
+                color: $text;
                 width: 100%;
                 padding: 12px;
-                border: 1px solid $bgcolor-3;
+                border: 1px solid $platinum;
                 margin-top: 6px;
                 margin-bottom: 16px;
                 resize: vertical;
@@ -200,12 +203,12 @@ option[value] {
         input[type=submit] {
             width: 30%;
             background-color: $green;
-            color: $lemon-brown;
+            color: $text;
             padding: 1.4em;
             border: none;
             cursor: pointer;
             outline: none;
-            border: 1px solid $bgcolor-3;
+            border: 1px solid $platinum;
         }
         input[type=submit]:hover {
             background-color: $brown;

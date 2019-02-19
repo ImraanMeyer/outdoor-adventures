@@ -5,7 +5,7 @@
 }
 
 @mixin background {
-    background-image: linear-gradient($bgcolor-2, $bgcolor-1),  url(../images/cliff-crop.jpg);
+    background-image: linear-gradient($bgcolor-2, $bgcolor-1),  url(../images/bgcrop.jpg);
     background-blend-mode: multiply;
     background-position: bottom;
     background-size: cover;

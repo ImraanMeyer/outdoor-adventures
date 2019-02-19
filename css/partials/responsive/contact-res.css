@@ -4,7 +4,7 @@
     margin: 0 2em;
     grid-template-columns: 1fr 1em 1fr;
     grid-template-rows: repeat(auto, auto);
-    grid-template-areas: "name . sname" "email email email" "activty activty activty" "txt txt txt" "btn btn btn"; }
+    grid-template-areas: "name . sname" "email . activty" "txt txt txt" "btn btn btn"; }
     .form-grid .name {
       grid-area: name; }
     .form-grid .sname {

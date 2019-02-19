@@ -9,7 +9,7 @@
   background: #725752; }
 
 .contact-page {
-  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/cliff-crop.jpg);
+  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/bgcrop.jpg);
   background-blend-mode: multiply;
   background-position: bottom;
   background-size: cover;
@@ -17,7 +17,7 @@
   background-blend-mode: color-burn; }
 
 .gallery-page {
-  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/cliff-crop.jpg);
+  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/bgcrop.jpg);
   background-blend-mode: multiply;
   background-position: bottom;
   background-size: cover;
@@ -26,7 +26,8 @@
 
 body, * {
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 h1,
 h2,
@@ -34,20 +35,21 @@ h3 {
   font-family: 'Merriweather', serif;
   font-weight: 400;
   text-align: center;
-  color: #d4dfc7; }
+  color: #EEE5E9; }
 
 p,
 a {
   font-family: 'Poppins', sans-serif;
-  color: #eef0f2;
+  color: #EEE5E9;
   font-weight: 300;
-  color: #eef0f2; }
+  color: #EEE5E9; }
 
 h2 {
-  margin: 0 auto 1.6em; }
+  margin: 0 auto 1.6em;
+  font-size: 3.2vw; }
 
 h2::after {
-  background-color: #d4dfc7;
+  background-color: #EEE5E9;
   content: '';
   display: block;
   color: inherit;
@@ -79,9 +81,9 @@ select[id],
 textarea[placeholder],
 input[type=submit] {
   font-family: 'Poppins', sans-serif;
-  color: #eef0f2;
+  color: #EEE5E9;
   font-weight: 300;
-  color: #fef6c9;
+  color: #EEE5E9;
   font-weight: 400;
   background-color: #909190; }
 
@@ -90,14 +92,14 @@ option[value] {
 
 .grid .main-header {
   text-align: center;
-  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/cliff-crop.jpg);
+  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/bgcrop.jpg);
   background-blend-mode: multiply;
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
   .grid .main-header .sub {
-    color: #d4dfc7;
+    color: #EEE5E9;
     font-size: 2vw;
     padding: 18vh 0 0 0;
     text-align: center;
@@ -107,26 +109,26 @@ option[value] {
   .grid .main-header .sub::after {
     content: "";
     display: block;
-    border-bottom: solid #d4dfc7 2.8px; }
+    border-bottom: solid  2.8px; }
   .grid .main-header .title {
     font-size: 6vw; }
 
 .primary-content {
-  padding: 0 1em;
+  padding: 2em;
   margin: 1.2em auto;
   text-align: center; }
 
 .secondary-content {
   background: #909190;
-  padding: 2em 2em 4em;
+  padding: 2em;
   text-align: center; }
   .secondary-content .figure {
-    background-color: #d4dfc7;
+    background-color: #EEE5E9;
     border-top: #725752 1em solid; }
     .secondary-content .figure h3 {
       font-size: x-large; }
     .secondary-content .figure p {
-      color: #eef0f2;
+      color: #EEE5E9;
       background-color: #96c094;
       padding: 0.25rem;
       margin: 0.45rem 0;
@@ -140,21 +142,21 @@ option[value] {
   padding: 2vh;
   contain: content; }
   .main-footer .left-text p {
-    font-size: 0.8em;
+    font-size: 1vw;
     margin-top: 1.4vh; }
 
 .contact-page {
-  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/cliff-crop.jpg);
+  background-image: linear-gradient(#878e88b4, #f5c1b8d8), url(../images/bgcrop.jpg);
   background-blend-mode: multiply;
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat; }
   .contact-page .form-title {
-    color: #d4dfc7;
+    color: #EEE5E9;
     margin: 1.4em auto;
     max-width: 500px; }
   .contact-page .form-title::after {
-    background: #d4dfc7;
+    background: #EEE5E9;
     content: '';
     display: block;
     color: inherit;
@@ -170,9 +172,10 @@ option[value] {
     .contact-page .form .form-grid input[type=email],
     .contact-page .form .form-grid select,
     .contact-page .form .form-grid textarea {
+      color: #EEE5E9;
       width: 100%;
       padding: 12px;
-      border: 1px solid #fef6c9b4;
+      border: 1px solid #EEE5E9;
       margin-top: 6px;
       margin-bottom: 16px;
       resize: vertical;
@@ -182,12 +185,12 @@ option[value] {
     .contact-page .form input[type=submit] {
       width: 30%;
       background-color: #96c094;
-      color: #fef6c9;
+      color: #EEE5E9;
       padding: 1.4em;
       border: none;
       cursor: pointer;
       outline: none;
-      border: 1px solid #fef6c9b4; }
+      border: 1px solid #EEE5E9; }
     .contact-page .form input[type=submit]:hover {
       background-color: #725752; }
 
@@ -196,7 +199,8 @@ option[value] {
   position: sticky;
   padding-top: 0.5vh;
   padding-bottom: 0.5vh;
-  text-align: center; }
+  text-align: center;
+  z-index: 4; }
   .main-nav .main-nav-ul {
     display: flex;
     flex-direction: row;
@@ -216,7 +220,7 @@ option[value] {
     display: block; }
     .main-nav .dropdown .dropdown-content {
       background: #909190;
-      color: #eef0f2;
+      color: #EEE5E9;
       display: none;
       position: relative;
       z-index: 1;
@@ -273,7 +277,7 @@ option[value] {
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .gallery-container {
     margin: 0 1em;
-    column-count: 5;
+    column-count: 4;
     column-gap: 1em;
     background-image: url(../cliff-crop.jpg); } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1000px) {
@@ -350,7 +354,7 @@ option[value] {
 @media screen and (min-device-width: 768px) and (max-device-width: 1600px) {
   .figure {
     display: grid;
-    grid-template-rows: auto auto 6em auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "title title" "img img" "text text" "btn1 btn2"; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
@@ -380,7 +384,8 @@ a:active {
   opacity: 0.85; }
 
 .btn:hover {
-  opacity: 1; }
+  opacity: 1;
+  font-weight: 900; }
 
 .btn1 {
   background-color: #725752; }
@@ -438,7 +443,7 @@ a:active {
   border-bottom: 5px solid #eef0f2;
   border-right: 5px solid #eef0f2;
   transform: rotate(45deg);
-  margin: -10px;
+  margin-top: -50px;
   animation: animate-up 2s infinite; }
 
 @keyframes animate-up {
@@ -448,10 +453,10 @@ a:active {
 .fab {
   font-size: 3vw;
   padding: 0 0.6em 0em 0.6em;
-  color: #fef6c9; }
+  color: #EEE5E9; }
 
 .fab:hover {
-  color: #909190; }
+  color: #393D3F; }
 
 @media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .activty {
@@ -473,7 +478,7 @@ a:active {
     grid-template-columns: 2fr 2em 2fr;
     grid-template-rows: auto;
     grid-template-areas: "title title title" "row1 . row2";
-    margin: 2em auto; }
+    margin: 0 auto; }
 
   #section-title {
     grid-area: title; }
@@ -512,7 +517,7 @@ a:active {
     margin: 0 2em;
     grid-template-columns: 1fr 1em 1fr;
     grid-template-rows: repeat(auto, auto);
-    grid-template-areas: "name . sname" "email email email" "activty activty activty" "txt txt txt" "btn btn btn"; }
+    grid-template-areas: "name . sname" "email . activty" "txt txt txt" "btn btn btn"; }
     .form-grid .name {
       grid-area: name; }
     .form-grid .sname {

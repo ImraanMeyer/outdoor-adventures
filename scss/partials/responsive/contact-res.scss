@@ -10,8 +10,7 @@
         grid-template-rows: repeat(auto, auto);
         grid-template-areas: 
             "name . sname"
-            "email email email"
-            "activty activty activty"
+            "email . activty"
             "txt txt txt"
             "btn btn btn";
     

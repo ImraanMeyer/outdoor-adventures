@@ -1,0 +1,60 @@
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .form-grid {
+    display: -ms-grid;
+    display: grid;
+    margin: 0 2em;
+    -ms-grid-columns: 1fr 1em 1fr;
+        grid-template-columns: 1fr 1em 1fr;
+    -ms-grid-rows: (auto)[auto];
+        grid-template-rows: repeat(auto, auto);
+        grid-template-areas: "name . sname" "email . activty" "txt txt txt" "btn btn btn";
+  }
+  .form-grid .name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: name;
+  }
+  .form-grid .sname {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: sname;
+  }
+  .form-grid .email {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: email;
+  }
+  .form-grid .activty-select {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: activty;
+  }
+  .form-grid .text-area {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: txt;
+  }
+  .form-grid .sbt-btn {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: btn;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1000px) {
+  .contact-page {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto 1fr 10vh;
+        grid-template-rows: auto auto 1fr 10vh;
+        grid-template-areas: "nav" "title" "form" "footer";
+  }
+  .contact-page .form {
+    margin: 0 1.6em 2em;
+  }
+}
+/*# sourceMappingURL=contact-res.css.map */
