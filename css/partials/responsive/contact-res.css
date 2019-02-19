@@ -24,6 +24,8 @@
     grid-template-rows: auto auto 1fr 10vh;
     grid-template-areas: "nav" "title" "form" "footer"; }
     .contact-page .form {
-      margin: 0 1.6em 2em; } }
+      margin: 0 1.6em 2em; }
+      .contact-page .form .sbt-btn {
+        width: 100% !important; } }
 
 /*# sourceMappingURL=contact-res.css.map */

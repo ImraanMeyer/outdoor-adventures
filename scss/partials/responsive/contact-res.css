@@ -56,5 +56,8 @@
   .contact-page .form {
     margin: 0 1.6em 2em;
   }
+  .contact-page .form .sbt-btn {
+    width: 100% !important;
+  }
 }
 /*# sourceMappingURL=contact-res.css.map */

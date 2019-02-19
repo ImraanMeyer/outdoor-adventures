@@ -6,6 +6,10 @@
     padding-bottom: 0.5vh; 
     text-align: center;
     z-index: 4;
+
+    .icon {
+        display: none;
+    }
         .main-nav-ul {
             display: flex;
             flex-direction: row;
@@ -84,4 +88,35 @@
             font-size: 2vw;
         }
     }
+
+    .main-nav {
+        overflow: hidden;
+        background-color: #fff0;
+        position: relative;
+        .icon {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+      }
+      
+      .main-nav .main-nav-ul {
+        display: none;
+      }
+      
+      .main-nav a {
+        float: left;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .main-nav a.icon {
+        float: right;
+      }
+      
+      .main-nav a:hover {
+        background-color: $bgnav-1;
+      }
 }
