@@ -1,4 +1,63 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather|Poppins");
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto 1fr 10vh;
+  grid-template-areas: "nav nav" "title title" "blank form" "footer footer"; }
+  .contact-page .main-nav {
+    grid-area: nav; }
+  .contact-page .form-title {
+    grid-area: title; }
+  .contact-page .main-footer {
+    grid-area: footer; }
+  .contact-page .form {
+    grid-area: form;
+    margin-bottom: 2em; }
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 6px; }
+  .gallery-container .img-container {
+    object-fit: cover;
+    position: relative;
+    overflow: hidden; }
+    .gallery-container .img-container img {
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      transition: all .2s;
+      transform: scale(1); }
+      .gallery-container .img-container img:hover {
+        transform: scale(1.08);
+        transition: all .2s; }
+  .gallery-container .span_1 {
+    grid-column: span 2; }
+  .gallery-container .span_2 {
+    grid-column: span 2;
+    grid-row: span 2; }
+  .gallery-container .span_3 {
+    grid-row: span 2; }
+
+.main-footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "left middle right"; }
+  .main-footer .left-text {
+    grid-area: left;
+    text-align: left; }
+  .main-footer .middle {
+    grid-area: middle;
+    text-align: center; }
+  .main-footer .right-up {
+    grid-area: right;
+    justify-self: right; }
+
 .grid,
 .gallery-page,
 .contact-page {
@@ -46,17 +105,17 @@ a {
 
 h2 {
   margin: 0 auto 1.6em;
-  font-size: 3.2vw; }
+  font-size: 34px; }
 
 h2::after {
   background-color: #EEE5E9;
   content: '';
   display: block;
   color: inherit;
-  width: auto;
-  height: 0.2rem;
-  text-align: left !important;
-  margin-top: 6px;
+  width: 200px;
+  height: 2px;
+  text-align: left;
+  margin: 6px auto 0;
   text-align: left; }
 
 h3 {
@@ -67,10 +126,10 @@ h3::after {
   content: '';
   display: block;
   color: inherit;
-  width: auto;
-  height: 0.2rem;
-  text-align: left !important;
-  margin-top: 6px;
+  width: 200px;
+  height: 2px;
+  text-align: left;
+  margin: 6px auto 0;
   background-color: #909190; }
 
 option[value],
@@ -118,7 +177,7 @@ option[value] {
   margin: 1.2em auto;
   text-align: center; }
   .primary-content p {
-    font-size: 2vw;
+    font-size: 1em;
     padding: 1em; }
 
 .secondary-content {
@@ -164,10 +223,10 @@ option[value] {
     content: '';
     display: block;
     color: inherit;
-    width: auto;
-    height: 0.2rem;
-    text-align: left !important;
-    margin-top: 6px; }
+    width: 200px;
+    height: 2px;
+    text-align: left;
+    margin: 6px auto 0; }
   .contact-page .form {
     background-color: #fff0; }
     .contact-page .form .form-grid input[type=text] {
@@ -197,6 +256,66 @@ option[value] {
       border: 1px solid #EEE5E9; }
     .contact-page .form input[type=submit]:hover {
       background-color: #725752; }
+
+.figure {
+  max-width: 400px;
+  margin: 1.6em auto;
+  padding: 1em;
+  padding-top: 0;
+  opacity: 0.8;
+  transition: 0.4s ease-in;
+  text-align: left;
+  height: auto; }
+
+.figure:hover {
+  opacity: 1;
+  transition: 0.5s ease-out; }
+
+.grid-imgs {
+  height: 250px;
+  max-width: 100%;
+  margin: 0 auto; }
+
+.card-title {
+  grid-area: title; }
+
+.grid-imgs {
+  grid-area: img; }
+
+.card-text {
+  grid-area: text; }
+
+.btn1 {
+  grid-area: btn1; }
+
+.btn2 {
+  grid-area: btn2; }
+
+.figure {
+  display: grid;
+  margin: 2em auto;
+  grid-template-areas: "title" "img" "text" "btns"; }
+
+.card-title {
+  grid-area: title; }
+
+.grid-imgs {
+  grid-area: img; }
+
+.card-text {
+  grid-area: text; }
+
+.figure-btns {
+  grid-area: btns;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "read action"; }
+
+.btn1 {
+  grid-area: read; }
+
+.btn2 {
+  grid-area: action; }
 
 .main-nav {
   background: #ffffff09;
@@ -261,6 +380,9 @@ option[value] {
   background: #eef0f29c;
   transition: 0.4s ease; }
 
+.main-nav:hover a {
+  color: #725752; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
   .main-nav .main-nav-ul {
     justify-content: center;
@@ -289,33 +411,6 @@ option[value] {
 
   .main-nav a:hover {
     background-color: #ffffff09; } }
-.item {
-  display: inline-block;
-  margin: 0 0 1em;
-  width: 100%;
-  object-fit: cover;
-  opacity: .90; }
-
-.item:hover {
-  opacity: 1; }
-
-.img {
-  width: auto;
-  max-width: 100%;
-  height: auto; }
-
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-  .gallery-container {
-    margin: 0 1em;
-    column-count: 4;
-    column-gap: 1em;
-    background-image: url(../cliff-crop.jpg); } }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1000px) {
-  .gallery-container {
-    column-count: 3; } }
-@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
-  .gallery-container {
-    column-count: 1; } }
 .contact-page {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -330,6 +425,34 @@ option[value] {
   .contact-page .form {
     grid-area: form;
     margin-bottom: 2em; }
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 6px; }
+  .gallery-container .img-container {
+    object-fit: cover;
+    position: relative;
+    overflow: hidden; }
+    .gallery-container .img-container img {
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      transition: all .2s;
+      transform: scale(1); }
+      .gallery-container .img-container img:hover {
+        transform: scale(1.08);
+        transition: all .2s; }
+  .gallery-container .span_1 {
+    grid-column: span 2; }
+  .gallery-container .span_2 {
+    grid-column: span 2;
+    grid-row: span 2; }
+  .gallery-container .span_3 {
+    grid-row: span 2; }
 
 .main-footer {
   grid-area: footer;
@@ -347,52 +470,6 @@ option[value] {
     grid-area: right;
     justify-self: right; }
 
-.figure {
-  max-width: 400px;
-  margin: 1.6em auto;
-  padding: 1em;
-  padding-top: 0;
-  opacity: 0.8;
-  transition: 0.4s ease-in;
-  text-align: left;
-  height: auto; }
-
-.figure:hover {
-  opacity: 1;
-  transition: 0.5s ease-out; }
-
-.grid-imgs {
-  height: 250px;
-  max-width: 100%;
-  margin: 0 auto; }
-
-.card-title {
-  grid-area: title; }
-
-.grid-imgs {
-  grid-area: img; }
-
-.card-text {
-  grid-area: text; }
-
-.btn1 {
-  grid-area: btn1; }
-
-.btn2 {
-  grid-area: btn2; }
-
-@media screen and (min-device-width: 768px) and (max-device-width: 1600px) {
-  .figure {
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "title title" "img img" "text text" "btn1 btn2"; } }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-  .figure {
-    display: grid;
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: 1fr;
-    grid-template-areas: "title" "img" "text" "btn1" "btn2"; } }
 a {
   text-decoration: none;
   text-transform: uppercase;
@@ -404,7 +481,7 @@ a:hover {
 a:active {
   color: #909190; }
 
-.btn {
+.figure .btn {
   border: none;
   outline: none;
   padding: 2em;
@@ -412,22 +489,25 @@ a:active {
   color: #eef0f2 !important;
   font-size: 0.8em;
   opacity: 0.85; }
-
-.btn:hover {
+.figure .btn:hover {
   opacity: 1;
   font-weight: 900; }
-
-.btn1 {
+.figure .btn1 {
   background-color: #725752; }
-
-.btn2 {
+.figure .btn2 {
   background-color: #909190; }
-
-.btn1:hover {
+.figure .btn1:hover {
   background: #909190; }
-
-.btn2:hover {
+.figure .btn2:hover {
   background: #725752; }
+
+.fab {
+  font-size: 3vw;
+  padding: 0 0.6em 0em 0.6em;
+  color: #EEE5E9; }
+
+.fab:hover {
+  color: #393D3F; }
 
 .down-arrow {
   position: absolute;
@@ -480,14 +560,6 @@ a:active {
   0% {
     opacity: 0;
     transform: rotate(45deg) translate(10px, 10px); } }
-.fab {
-  font-size: 3vw;
-  padding: 0 0.6em 0em 0.6em;
-  color: #EEE5E9; }
-
-.fab:hover {
-  color: #393D3F; }
-
 @media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .activty {
     display: grid;
@@ -570,5 +642,131 @@ a:active {
       margin: 0 1.6em 2em; }
       .contact-page .form .sbt-btn {
         width: 100% !important; } }
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 100vh auto auto 10vh;
+    grid-template-areas: "nav nav nav" "header header header" "primary primary primary" "secondary secondary secondary" "footer footer footer"; }
+
+  .main-header {
+    grid-area: header; }
+
+  .main-nav {
+    grid-area: nav; }
+    .main-nav .main-nav-ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      text-align: center;
+      padding: 0;
+      list-style-type: none; }
+
+  .primary-content {
+    grid-area: primary; }
+
+  .secondary-content {
+    grid-area: secondary; }
+    .secondary-content .activty {
+      max-width: 1200px;
+      grid-gap: 2em;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto; }
+    .secondary-content .row1 {
+      margin: 0 auto 2em;
+      grid-template-areas: "fig1 fig2 fig3"; }
+    .secondary-content .row2 {
+      grid-template-areas: "fig4 fig5 fig6"; }
+    .secondary-content .figure1 {
+      grid-area: fig1; }
+    .secondary-content .figure2 {
+      grid-area: fig2; }
+    .secondary-content .figure3 {
+      grid-area: fig3; }
+    .secondary-content .figure4 {
+      grid-area: fig4; }
+    .secondary-content .figure5 {
+      grid-area: fig5; }
+    .secondary-content .figure6 {
+      grid-area: fig6; }
+
+  .main-footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "left middle right"; }
+    .main-footer .left-text {
+      grid-area: left;
+      text-align: left; }
+    .main-footer .middle {
+      grid-area: middle;
+      text-align: center; }
+    .main-footer .right-up {
+      grid-area: right;
+      justify-self: right; }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 8fr 1fr 8fr;
+    grid-template-rows: repeat(auto, auto);
+    grid-template-areas: "name . sname" "email email email" "activty activty activty" "txt txt txt"; }
+    .form-grid .form {
+      margin: 2em 70px 2em 500px; }
+    .form-grid .name {
+      grid-area: name;
+      display: inline-grid; }
+    .form-grid .sname {
+      grid-area: sname;
+      display: inline-grid; }
+    .form-grid .email {
+      grid-area: email; }
+    .form-grid .activty {
+      grid-area: activty; }
+    .form-grid .text-area {
+      grid-area: txt; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 2) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 100vh auto auto 10vh;
+    grid-template-areas: "nav" "header" "primary" "secondary" "footer"; }
+    .grid .main-header {
+      grid-area: header; }
+    .grid .main-nav {
+      grid-area: nav; }
+      .grid .main-nav ul {
+        float: left !important; }
+    .grid .main-nav-ul {
+      margin: 0 auto; }
+    .grid .primary-content {
+      grid-area: primary; }
+      .grid .primary-content h2 {
+        margin-top: 0; }
+    .grid .secondary-content {
+      grid-area: secondary; }
+      .grid .secondary-content .activty {
+        max-width: 1200px;
+        grid-gap: 2em;
+        margin: 0 auto;
+        display: grid;
+        place-content: center; }
+        .grid .secondary-content .activty .row1 {
+          margin: 0 auto 2em;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 1fr);
+          grid-template-areas: "fig1" "fig2" "fig3" !important; }
+        .grid .secondary-content .activty .row2 {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 1fr);
+          grid-template-areas: "fig4" "fig5" "fig6" !important; }
+        .grid .secondary-content .activty .figure {
+          display: grid;
+          margin: 2em auto; } }
 
 /*# sourceMappingURL=main.css.map */

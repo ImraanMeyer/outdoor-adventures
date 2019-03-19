@@ -46,7 +46,7 @@ a {
 // global h2 margins and underline ::after 
 h2 {
     margin: 0 auto 1.6em;
-    font-size: 3.2vw;
+    font-size: 34px;
 }
 h2::after {
     background-color: $headings;
@@ -91,29 +91,27 @@ option[value] {
             @include background;
             height: 100vh;
             
-                // sub title for header
-                .sub {
-                    color: $headings;
-                    font-size: 2vw;
-                    padding: 18vh 0 0 0;
-                    text-align: center;
-                    margin: 0 auto;
-                    max-width: 300px;
-                    line-height: 3.4em;
-                }
-                // underline code for heading specfic
-                .sub::after {
-                    content: "";
-                    display: block;
-                    border-bottom: solid  2.8px;
-                }
-                // title for header
-                .title {
-                    font-size: 6vw; 
-                }   
+            // sub title for header
+            .sub {
+                color: $headings;
+                font-size: 2vw;
+                padding: 18vh 0 0 0;
+                text-align: center;
+                margin: 0 auto;
+                max-width: 300px;
+                line-height: 3.4em;
+            }
+            // underline code for heading specfic
+            .sub::after {
+                content: "";
+                display: block;
+                border-bottom: solid  2.8px;
+            }
+            // title for header
+            .title {
+                font-size: 6vw; 
+            }   
         }
-
-        
     }
 }
 
@@ -124,7 +122,7 @@ option[value] {
     margin: 1.2em auto;
     text-align: center;
         p {
-            font-size: 2vw;
+            font-size: 1em;
             padding: 1em;
         }
 }
@@ -223,3 +221,74 @@ option[value] {
     
 }
 
+
+// styling for figures
+.figure {
+    max-width: 400px;
+    margin: 1.6em auto;
+    padding: 1em;
+    padding-top: 0;
+    @include opacity-on;
+    text-align: left;
+    height: auto;
+}
+.figure:hover {
+    @include opacity-reveal;
+}
+
+.grid-imgs {
+    height: 250px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+    .card-title {
+        grid-area: title;
+    }
+    .grid-imgs {
+        grid-area: img;
+    
+    }
+    .card-text {
+        grid-area: text;
+    }
+    
+    .btn1 {
+        grid-area: btn1;
+    }
+    .btn2 {
+        grid-area: btn2;
+    }
+
+    .figure {
+        display:grid;
+        margin: 2em auto;
+        grid-template-areas: 
+            "title"
+            "img"
+            "text"
+            "btns";
+        
+    }
+        .card-title {
+            grid-area: title;
+        }
+        .grid-imgs {
+            grid-area: img;
+        }
+        .card-text {
+            grid-area: text;
+        }
+        .figure-btns {
+            grid-area: btns;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+                "read action";
+        }
+            .btn1 {
+                grid-area: read;
+            }
+            .btn2 {
+                grid-area: action;
+            }

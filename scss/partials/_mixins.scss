@@ -36,10 +36,10 @@
     content: '';
     display: block;
     color: inherit;
-    width: auto;
-    height: 0.2rem;
-    text-align: left !important;
-    margin-top: 6px; 
+    width: 200px;
+    height: 2px;
+    text-align: left;
+    margin: 6px auto 0;
 }
 
 @mixin drop-line {

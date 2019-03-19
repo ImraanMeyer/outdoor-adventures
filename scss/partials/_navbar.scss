@@ -77,6 +77,10 @@
     transition: 0.4s ease;
 }
 
+.main-nav:hover a {
+    color: $primary-col;
+}
+
 
 @media only screen 
     and (min-device-width: 320px)

@@ -1,7 +1,156 @@
-@import 'partials/layout',
-        'partials/base';
+    // ----  H O M E  P A G E  ---- //
 
-/* Portrait and Landscape */
+@media screen 
+and (min-device-width: 1024px) 
+and (max-device-width: 1600px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+    .activty { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        max-width: 1200px;
+        grid-gap: 2em;
+        margin: 2em auto;
+    }
+
+    .row1 {
+        grid-template-areas: 
+            "fig1 fig2 fig3"
+    }
+    
+    .row2 {
+        grid-template-areas: 
+            "fig4 fig5 fig6"
+    }
+}
+
+@media only screen 
+    and (min-device-width: 768px)
+    and (max-device-width: 1000px) {
+    .secondary-content {
+        display: grid;
+        grid-template-columns: 2fr 2em 2fr;
+        grid-template-rows: auto ;
+        grid-template-areas:
+            "title title title"
+            "row1 . row2";
+        margin:0 auto;
+    }
+    #section-title {
+        grid-area: title;
+    }
+    .row1 {
+        grid-area: row1;
+    }
+    .row2 {
+        grid-area: row2;
+    }
+}
+
+
+@media only screen 
+    and (min-device-width: 320px)
+    and (max-device-width: 600px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    .primary-content {
+        h2 {
+            max-width: 60vh;
+        }
+    }
+    .secondary-content {
+        h2 {
+            padding: 1.2em 0;
+            margin: 0 auto; 
+        }
+    }
+    .primary-content,
+    .secondary-content {
+        padding: 0;
+    }
+    .activty {
+        max-width: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .row1 {
+        grid-template-areas: 
+            "fig1" "fig2" "fig3"
+    }
+    
+    .row2 {
+        grid-template-areas: 
+            "fig4" "fig5" "fig6"
+    }
+}
+
+
+// ---- C O N T A C T  P A G E ---- //
+
+@media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    .form-grid {
+        display: grid;
+        margin: 0 2em;
+        grid-template-columns:1fr 1em 1fr;
+        grid-template-rows: repeat(auto, auto);
+        grid-template-areas: 
+            "name . sname"
+            "email . activty"
+            "txt txt txt"
+            "btn btn btn";
+    
+            .name {
+                grid-area: name;
+            }
+            .sname {
+                grid-area: sname;
+            }
+            .email {
+                grid-area: email;
+            }
+            .activty-select {
+                grid-area: activty;
+            }
+            .text-area {
+                grid-area: txt;
+            }
+            .sbt-btn {
+                grid-area: btn;
+            }
+    
+    }
+}
+
+@media only screen 
+    and (min-device-width: 320px)
+    and (max-device-width: 1000px) { 
+        .contact-page {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto 1fr 10vh;
+            grid-template-areas: 
+                "nav"
+                "title"
+                "form"
+                "footer";
+            .form {
+                margin: 0 1.6em 2em;
+                    .sbt-btn {
+                        width: 100% !important;
+                    }
+            }
+            
+    }
+}
+
+
+
+// -- DESKTOP -- //
 @media screen 
     and (min-device-width: 1200px) 
     and (max-device-width: 1600px) 
@@ -11,7 +160,7 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:  auto 100vh 40vh auto 10vh;
+    grid-template-rows:  auto 100vh auto auto 10vh;
     grid-template-areas: 
         "nav nav nav"
         "header header header"
@@ -85,42 +234,6 @@
     .figure6 {
         grid-area: fig6;
     }
-        .figure {
-            display:grid;
-            margin: 2em auto;
-            
-
-            grid-template-rows:repeat(4, auto);
-            grid-template-columns: 1fr;
-            grid-template-areas: 
-                "title"
-                "img"
-                "text"
-                "btns";
-        }
-            .card-title {
-                grid-area: title;
-            }
-            .grid-imgs {
-                grid-area: img;
-            }
-            .card-text {
-                grid-area: text;
-            }
-            .card-bottom-grid {
-                grid-area: btns;
-                display: grid;
-                grid-template-rows: auto;
-                grid-template-columns: repeat(2, auto);
-                grid-template-areas: 
-                    "read   action";
-            }
-                .btn1 {
-                    grid-area: read;
-                }
-                .btn2 {
-                    grid-area: action;
-                }
 }
 
 .main-footer {
@@ -147,13 +260,7 @@
         }
 }
 
-// gallery page ------------------------------------ //
-.gallery-container  {
-    display: grid;
-    grid-gap: 0.45rem;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(auto, 200px);  
-}
+
 
 // form page ------------------------------------ // 
 
@@ -191,17 +298,16 @@
 }
 }
 
-// ----------- mobile ----------
+// ----------- M O B I L E ---------- //
 @media only screen 
-    and (min-device-width: 320px) 
-    and (max-device-width: 480px)
-    and (max-device-width: 600px)
+    and (min-device-width: 320px)
+    and (max-device-width: 700px)
     and (-webkit-min-device-pixel-ratio: 2) {
 
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  auto 100vh 40vh auto 10vh;
+    grid-template-rows:  auto 100vh auto auto 10vh;
     grid-template-areas: 
         "nav"
         "header"
@@ -241,8 +347,7 @@
             margin: 0 auto;
     
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
+            place-content: center;
                 
             .row1 {
                 margin: 0 auto 2em;
@@ -252,7 +357,7 @@
                 grid-template-areas: 
                     "fig1"
                     "fig2"
-                    "fig3";
+                    "fig3" !important;
             }
 
             .row2 {
@@ -262,7 +367,7 @@
                 grid-template-areas: 
                     "fig4"
                     "fig5"
-                    "fig6";
+                    "fig6" !important;
             }
 
             .figure {
