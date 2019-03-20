@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,aAAc;EACV,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO;EAC9B,kBAAkB,EAAE,kBAAkB;EACtC,mBAAmB,EACf,oDAGe;EAEf,uBAAU;IACN,SAAS,EAAE,GAAG;EAElB,yBAAY;IACR,SAAS,EAAE,KAAK;EAEpB,0BAAa;IACT,SAAS,EAAE,MAAM;EAErB,mBAAM;IACF,SAAS,EAAE,IAAI;IACf,aAAa,EAAE,GAAG",
-"sources": ["../../../scss/partials/layout/contact.scss"],
-"names": [],
-"file": "contact.css"
-}

@@ -265,16 +265,27 @@ option[value] {
   opacity: 0.8;
   transition: 0.4s ease-in;
   text-align: left;
-  height: auto; }
+  height: auto;
+  filter: blur(3px);
+  transition: all .1s; }
 
 .figure:hover {
+  transition: all .1s;
   opacity: 1;
-  transition: 0.5s ease-out; }
+  transition: 0.5s ease-out;
+  filter: blur(0);
+  transform: scale(1.06);
+  box-shadow: 1em 1em 2em #555; }
 
 .grid-imgs {
-  height: 250px;
-  max-width: 100%;
-  margin: 0 auto; }
+  position: relative;
+  overflow: hidden; }
+  .grid-imgs img {
+    height: 100%;
+    width: 100%;
+    transition: all .2s; }
+    .grid-imgs img:hover {
+      transform: scale(1.08); }
 
 .card-title {
   grid-area: title; }
@@ -589,7 +600,13 @@ a:active {
     grid-area: row1; }
 
   .row2 {
-    grid-area: row2; } }
+    grid-area: row2; }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important; }
+    .gallery-container .span_4 {
+      grid-column: span 2; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
   .primary-content h2 {
     max-width: 60vh; }
@@ -612,7 +629,11 @@ a:active {
     grid-template-areas: "fig1" "fig2" "fig3"; }
 
   .row2 {
-    grid-template-areas: "fig4" "fig5" "fig6"; } }
+    grid-template-areas: "fig4" "fig5" "fig6"; }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: 1fr !important; } }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .form-grid {
     display: grid;
