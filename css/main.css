@@ -266,7 +266,7 @@ option[value] {
   transition: 0.4s ease-in;
   text-align: left;
   height: auto;
-  filter: blur(3px);
+  filter: blur(2px);
   transition: all .1s; }
 
 .figure:hover {
@@ -572,98 +572,6 @@ a:active {
     opacity: 0;
     transform: rotate(45deg) translate(10px, 10px); } }
 @media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-  .activty {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    max-width: 1200px;
-    grid-gap: 2em;
-    margin: 2em auto; }
-
-  .row1 {
-    grid-template-areas: "fig1 fig2 fig3"; }
-
-  .row2 {
-    grid-template-areas: "fig4 fig5 fig6"; } }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1000px) {
-  .secondary-content {
-    display: grid;
-    grid-template-columns: 2fr 2em 2fr;
-    grid-template-rows: auto;
-    grid-template-areas: "title title title" "row1 . row2";
-    margin: 0 auto; }
-
-  #section-title {
-    grid-area: title; }
-
-  .row1 {
-    grid-area: row1; }
-
-  .row2 {
-    grid-area: row2; }
-
-  .gallery-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr !important; }
-    .gallery-container .span_4 {
-      grid-column: span 2; } }
-@media only screen and (min-device-width: 320px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
-  .primary-content h2 {
-    max-width: 60vh; }
-
-  .secondary-content h2 {
-    padding: 1.2em 0;
-    margin: 0 auto; }
-
-  .primary-content,
-  .secondary-content {
-    padding: 0; }
-
-  .activty {
-    max-width: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto; }
-
-  .row1 {
-    grid-template-areas: "fig1" "fig2" "fig3"; }
-
-  .row2 {
-    grid-template-areas: "fig4" "fig5" "fig6"; }
-
-  .gallery-container {
-    display: grid;
-    grid-template-columns: 1fr !important; } }
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-  .form-grid {
-    display: grid;
-    margin: 0 2em;
-    grid-template-columns: 1fr 1em 1fr;
-    grid-template-rows: repeat(auto, auto);
-    grid-template-areas: "name . sname" "email . activty" "txt txt txt" "btn btn btn"; }
-    .form-grid .name {
-      grid-area: name; }
-    .form-grid .sname {
-      grid-area: sname; }
-    .form-grid .email {
-      grid-area: email; }
-    .form-grid .activty-select {
-      grid-area: activty; }
-    .form-grid .text-area {
-      grid-area: txt; }
-    .form-grid .sbt-btn {
-      grid-area: btn; } }
-@media only screen and (min-device-width: 320px) and (max-device-width: 1000px) {
-  .contact-page {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr 10vh;
-    grid-template-areas: "nav" "title" "form" "footer"; }
-    .contact-page .form {
-      margin: 0 1.6em 2em; }
-      .contact-page .form .sbt-btn {
-        width: 100% !important; } }
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -732,23 +640,81 @@ a:active {
 
   .form-grid {
     display: grid;
-    grid-template-columns: 8fr 1fr 8fr;
+    margin: 0 2em;
+    grid-template-columns: 1fr 1em 1fr;
     grid-template-rows: repeat(auto, auto);
-    grid-template-areas: "name . sname" "email email email" "activty activty activty" "txt txt txt"; }
-    .form-grid .form {
-      margin: 2em 70px 2em 500px; }
+    grid-template-areas: "name . sname" "email . activty" "txt txt txt" "btn btn btn"; }
     .form-grid .name {
-      grid-area: name;
-      display: inline-grid; }
+      grid-area: name; }
     .form-grid .sname {
-      grid-area: sname;
-      display: inline-grid; }
+      grid-area: sname; }
     .form-grid .email {
       grid-area: email; }
-    .form-grid .activty {
+    .form-grid .activty-select {
       grid-area: activty; }
     .form-grid .text-area {
-      grid-area: txt; } }
+      grid-area: txt; }
+    .form-grid .sbt-btn {
+      grid-area: btn; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1000px) {
+  .secondary-content {
+    display: grid;
+    grid-template-columns: 2fr 2em 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title title title" "row1 . row2";
+    margin: 0 auto; }
+
+  #section-title {
+    grid-area: title; }
+
+  .row1 {
+    grid-area: row1; }
+
+  .row2 {
+    grid-area: row2; }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important; }
+    .gallery-container .span_4 {
+      grid-column: span 2; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
+  .primary-content h2 {
+    max-width: 60vh; }
+
+  .secondary-content h2 {
+    padding: 1.2em 0;
+    margin: 0 auto; }
+
+  .primary-content,
+  .secondary-content {
+    padding: 0; }
+
+  .activty {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; }
+
+  .row1 {
+    grid-template-areas: "fig1" "fig2" "fig3"; }
+
+  .row2 {
+    grid-template-areas: "fig4" "fig5" "fig6"; }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: 1fr !important; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 1000px) {
+  .contact-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr 10vh;
+    grid-template-areas: "nav" "title" "form" "footer"; }
+    .contact-page .form {
+      margin: 0 1.6em 2em; }
+      .contact-page .form .sbt-btn {
+        width: 100% !important; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 2) {
   .grid {
     display: grid;

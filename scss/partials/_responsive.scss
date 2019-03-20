@@ -1,29 +1,149 @@
-    // ----  H O M E  P A G E  ---- //
-
+// ----  H O M E  P A G E  ---- //
+// ------ Desktop Responsive View ------//
 @media screen 
 and (min-device-width: 1024px) 
 and (max-device-width: 1600px) 
 and (-webkit-min-device-pixel-ratio: 1) { 
-    .activty { 
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:  auto 100vh auto auto 10vh;
+        grid-template-areas: 
+            "nav nav nav"
+            "header header header"
+            "primary primary primary"
+            "secondary secondary secondary"
+            "footer footer footer";
+    }
+    
+    .main-header {
+        grid-area: header;
+    }
+    
+    .main-nav {
+        grid-area: nav;
+        .main-nav-ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            text-align: center;
+            padding: 0;
+            list-style-type: none;
+        }
+    }   
+    
+    .primary-content {
+        grid-area: primary;
+    }
+    
+    .secondary-content {
+        grid-area: secondary;
+    
+        .activty {
+            max-width: 1200px;
+            grid-gap: 2em;
+            margin: 0 auto;
+    
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+        }
+    
+            .row1 {
+                margin: 0 auto 2em;
+                grid-template-areas: 
+                    "fig1 fig2 fig3"
+            }
+            
+            .row2 {
+                grid-template-areas: 
+                    "fig4 fig5 fig6"
+            }
+
+        .figure1 {
+            grid-area: fig1;
+        }
+        .figure2 {
+            grid-area: fig2;
+        }
+        .figure3 {
+            grid-area: fig3;
+        }
+        .figure4 {
+            grid-area: fig4;
+        }
+        .figure5 {
+            grid-area: fig5;
+        }
+        .figure6 {
+            grid-area: fig6;
+        }
+    }
+    
+    .main-footer {
+        grid-area: footer;
+    
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-        max-width: 1200px;
-        grid-gap: 2em;
-        margin: 2em auto;
+        grid-template-areas: 
+            "left middle right";
+    
+        .left-text {
+            grid-area: left;
+            text-align: left;
+
+        }
+        .middle {
+            grid-area: middle;
+            text-align: center;
+        }
+        .right-up {
+            grid-area: right;
+            justify-self: right;
+        }
     }
 
-    .row1 {
+
+    // --- C O N T A C T  P A G E --- //
+    .form-grid {
+        display: grid;
+        margin: 0 2em;
+        grid-template-columns:1fr 1em 1fr;
+        grid-template-rows: repeat(auto, auto);
         grid-template-areas: 
-            "fig1 fig2 fig3"
+            "name . sname"
+            "email . activty"
+            "txt txt txt"
+            "btn btn btn";
+    
+            .name {
+                grid-area: name;
+            }
+            .sname {
+                grid-area: sname;
+            }
+            .email {
+                grid-area: email;
+            }
+            .activty-select {
+                grid-area: activty;
+            }
+            .text-area {
+                grid-area: txt;
+            }
+            .sbt-btn {
+                grid-area: btn;
+            }
+    
     }
     
-    .row2 {
-        grid-template-areas: 
-            "fig4 fig5 fig6"
-    }
 }
 
+
+
+// ---- T A B L E T  V I E W ---- //
 @media only screen 
     and (min-device-width: 768px)
     and (max-device-width: 1000px) {
@@ -52,10 +172,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
         .span_4 {
             grid-column: span 2;
         }
-    }
+    } 
 }
 
 
+// ---- M O B I L E  V I E W ---- //
 @media only screen 
     and (min-device-width: 320px)
     and (max-device-width: 600px)
@@ -102,43 +223,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 // ---- C O N T A C T  P A G E ---- //
 
-@media screen 
-    and (min-device-width: 1200px) 
-    and (max-device-width: 1600px) 
-    and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    .form-grid {
-        display: grid;
-        margin: 0 2em;
-        grid-template-columns:1fr 1em 1fr;
-        grid-template-rows: repeat(auto, auto);
-        grid-template-areas: 
-            "name . sname"
-            "email . activty"
-            "txt txt txt"
-            "btn btn btn";
-    
-            .name {
-                grid-area: name;
-            }
-            .sname {
-                grid-area: sname;
-            }
-            .email {
-                grid-area: email;
-            }
-            .activty-select {
-                grid-area: activty;
-            }
-            .text-area {
-                grid-area: txt;
-            }
-            .sbt-btn {
-                grid-area: btn;
-            }
-    
-    }
-}
 
 @media only screen 
     and (min-device-width: 320px)
@@ -159,158 +243,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
                     }
             }
             
-    }
-}
-
-
-
-// -- DESKTOP -- //
-@media screen 
-    and (min-device-width: 1200px) 
-    and (max-device-width: 1600px) 
-    and (-webkit-min-device-pixel-ratio: 1) { 
-
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:  auto 100vh auto auto 10vh;
-    grid-template-areas: 
-        "nav nav nav"
-        "header header header"
-        "primary primary primary"
-        "secondary secondary secondary"
-        "footer footer footer";
-}
-
-.main-header {
-    grid-area: header;
-}
-
-.main-nav {
-    grid-area: nav;
-    .main-nav-ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        text-align: center;
-        padding: 0;
-        list-style-type: none;
-    }
-}   
-
-.primary-content {
-    grid-area: primary;
-}
-
-.secondary-content {
-    grid-area: secondary;
-
-    .activty {
-        max-width: 1200px;
-        grid-gap: 2em;
-        margin: 0 auto;
-
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
+        }
     }
 
-        .row1 {
-            margin: 0 auto 2em;
-            grid-template-areas: 
-                "fig1 fig2 fig3"
-        }
-        
-        .row2 {
-            grid-template-areas: 
-                "fig4 fig5 fig6"
-        }
-        
-        
-        
-    .figure1 {
-        grid-area: fig1;
-    }
-    .figure2 {
-        grid-area: fig2;
-    }
-    .figure3 {
-        grid-area: fig3;
-    }
-    .figure4 {
-        grid-area: fig4;
-    }
-    .figure5 {
-        grid-area: fig5;
-    }
-    .figure6 {
-        grid-area: fig6;
-    }
-}
 
-.main-footer {
-    grid-area: footer;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "left middle right";
-
-        .left-text {
-            grid-area: left;
-            text-align: left;
-
-        }
-        .middle {
-            grid-area: middle;
-            text-align: center;
-        }
-        .right-up {
-            grid-area: right;
-            justify-self: right;
-        }
-}
-
-
-
-// form page ------------------------------------ // 
-
-.form-grid {
-    .form {
-        margin: 2em 70px 2em 500px ;
-    }
-    display: grid;
-    grid-template-columns:8fr 1fr 8fr;
-    grid-template-rows: repeat(auto, auto);
-    grid-template-areas: 
-        "name . sname"
-        "email email email"
-        "activty activty activty"
-        "txt txt txt";
-
-        .name {
-            grid-area: name;
-            display: inline-grid;
-        }
-        .sname {
-            grid-area: sname;
-            display: inline-grid;
-        }
-        .email {
-            grid-area: email;
-        }
-        .activty {
-            grid-area: activty;
-        }
-        .text-area {
-            grid-area: txt;
-        }
-        
-}
-}
 
 // ----------- M O B I L E ---------- //
 @media only screen 
@@ -391,5 +327,4 @@ and (-webkit-min-device-pixel-ratio: 1) {
         }
     }
 }
-   
-}
+    }

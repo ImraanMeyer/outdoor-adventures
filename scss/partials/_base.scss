@@ -231,7 +231,7 @@ option[value] {
     @include opacity-on;
     text-align: left;
     height: auto;
-    filter: blur(3px);
+    filter: blur(2px);
     transition: all .1s;
 }
 .figure:hover {
