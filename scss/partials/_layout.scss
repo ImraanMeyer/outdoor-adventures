@@ -66,19 +66,6 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // FOOTER GLOBAL 
 .main-footer {
     grid-area: footer;
@@ -102,4 +89,27 @@
             grid-area: right;
             justify-self: right;
         }
+}
+
+.main-footer::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 125px;
+    left: 0;
+    background: $grey;
+    transform: skewY(10deg);
+    bottom: -2px;
+    z-index: -2;
+}
+.main-footer::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 125px;
+    bottom: -2px;
+    right: 0;
+    background: $grey;
+    transform:  skewY(-10deg);
+    z-index: -2;
 }

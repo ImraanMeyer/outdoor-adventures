@@ -58,6 +58,28 @@
     grid-area: right;
     justify-self: right; }
 
+.main-footer::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 125px;
+  left: 0;
+  background: #909190;
+  transform: skewY(10deg);
+  bottom: -2px;
+  z-index: -2; }
+
+.main-footer::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 125px;
+  bottom: -2px;
+  right: 0;
+  background: #909190;
+  transform: skewY(-10deg);
+  z-index: -2; }
+
 .grid,
 .gallery-page,
 .contact-page {
@@ -105,7 +127,9 @@ a {
 
 h2 {
   margin: 0 auto 1.6em;
-  font-size: 34px; }
+  font-size: 34px;
+  position: relative;
+  z-index: 2; }
 
 h2::after {
   background-color: #EEE5E9;
@@ -178,7 +202,29 @@ option[value] {
   text-align: center; }
   .primary-content p {
     font-size: 1em;
-    padding: 1em; }
+    padding: 1em;
+    position: relative;
+    z-index: 2; }
+
+.primary-content::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 125px;
+  left: 0;
+  background: #725752;
+  transform: skewY(10deg);
+  bottom: -70px; }
+
+.primary-content::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 125px;
+  bottom: -70px;
+  right: 0;
+  background: #725752;
+  transform: skewY(-10deg); }
 
 .secondary-content {
   background: #909190;
@@ -480,6 +526,28 @@ option[value] {
   .main-footer .right-up {
     grid-area: right;
     justify-self: right; }
+
+.main-footer::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 125px;
+  left: 0;
+  background: #909190;
+  transform: skewY(10deg);
+  bottom: -2px;
+  z-index: -2; }
+
+.main-footer::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 125px;
+  bottom: -2px;
+  right: 0;
+  background: #909190;
+  transform: skewY(-10deg);
+  z-index: -2; }
 
 a {
   text-decoration: none;
