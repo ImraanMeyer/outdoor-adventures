@@ -639,7 +639,7 @@ a:active {
   0% {
     opacity: 0;
     transform: rotate(45deg) translate(10px, 10px); } }
-@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 1024px) and (max-device-width: 1900px) and (-webkit-min-device-pixel-ratio: 1) {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
